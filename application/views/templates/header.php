@@ -22,6 +22,13 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/vendors/css/charts/chartist.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/vendors/css/charts/chartist-plugin-tooltip.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/vendors/css/tables/datatable/datatables.min.css">
+
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/vendors/css/pickers/daterange/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/vendors/css/pickers/pickadate/default.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/vendors/css/pickers/pickadate/default.date.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/vendors/css/pickers/pickadate/default.time.css">
+
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/vendors/css/forms/selects/select2.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -40,6 +47,8 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/core/colors/palette-gradient.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/pages/chat-application.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/pages/dashboard-analytics.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/plugins/pickers/daterange/daterange.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/css/plugins/animate/animate.min.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->

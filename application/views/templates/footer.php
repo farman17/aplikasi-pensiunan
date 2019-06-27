@@ -151,8 +151,16 @@
 <!-- BEGIN Vendor JS-->
 
 <!-- BEGIN: Page Vendor JS-->
-<script src="<?= base_url()?>assets/vendors/js/charts/chartist.min.js" type="text/javascript"></script>
-<script src="<?= base_url()?>assets/vendors/js/charts/chartist-plugin-tooltip.min.js" type="text/javascript"></script>
+<!--<script src="--><?//= base_url()?><!--assets/vendors/js/charts/chartist.min.js" type="text/javascript"></script>-->
+<!--<script src="--><?//= base_url()?><!--assets/vendors/js/charts/chartist-plugin-tooltip.min.js" type="text/javascript"></script>-->
+<script src="<?= base_url()?>assets/vendors/js/pickers/pickadate/picker.js" type="text/javascript"></script>
+<script src="<?= base_url()?>assets/vendors/js/pickers/pickadate/picker.date.js" type="text/javascript"></script>
+<script src="<?= base_url()?>assets/vendors/js/pickers/pickadate/picker.time.js" type="text/javascript"></script>
+<script src="<?= base_url()?>assets/vendors/js/pickers/pickadate/legacy.js" type="text/javascript"></script>
+<script src="<?= base_url()?>assets/vendors/js/pickers/dateTime/moment-with-locales.min.js" type="text/javascript"></script>
+<script src="<?= base_url()?>assets/vendors/js/pickers/daterange/daterangepicker.js" type="text/javascript"></script>
+
+<script src="<?= base_url()?>assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
 <!-- END: Page Vendor JS-->
 
 <!-- BEGIN: Theme JS-->
@@ -163,10 +171,15 @@
 <!-- END: Theme JS-->
 
 <!-- BEGIN: Page JS-->
-<script src="<?= base_url()?>assets/js/scripts/pages/dashboard-analytics.min.js" type="text/javascript"></script>
+<!--<script src="--><?//= base_url()?><!--assets/js/scripts/pages/dashboard-analytics.min.js" type="text/javascript"></script>-->
 <script src="<?= base_url()?>assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
 <script src="<?= base_url()?>assets/js/scripts/tables/datatables/datatable-basic.min.js" type="text/javascript"></script>
 
+<script src="<?= base_url()?>assets/js/scripts/forms/select/form-select2.min.js" type="text/javascript"></script>
+
+<script src="<?= base_url()?>assets/js/scripts/popover/popover.min.js" type="text/javascript"></script>
+
+<script src="<?= base_url()?>assets/js/core/sigaka.js" type="text/javascript"></script>
 <!-- END: Page JS-->
 
 </body>
