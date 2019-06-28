@@ -10,6 +10,10 @@ class KaryawanController extends CI_Controller{
 		$helper = array('tgl_indo_helper');
 		$this->load->model($model);
 		$this->load->helper($helper);
+		if (!$this->session->has_userdata('session_id')) {
+			$this->session->set_flashdata('alert', 'belum_login');
+			redirect(base_url('login'));
+		}
     }
 
     public function index(){

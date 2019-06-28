@@ -62,6 +62,9 @@ $route['gaji/updateForm/(:any)'] = 'GajiController/updateForm/$1';
 $route['gaji/update'] = 'GajiController/update';
 $route['gaji/hapus/(:any)'] = 'GajiController/hapus/$1';
 
+$route['login'] = 'AuthController/login';
+$route['logout'] = 'AuthController/logout';
+
 $route['default_controller'] = 'DashboardController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

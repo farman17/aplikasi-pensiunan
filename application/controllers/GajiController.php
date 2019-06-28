@@ -8,6 +8,10 @@ class GajiController extends CI_Controller{
 		parent::__construct();
 		$this->load->model('GajiModel');
 		$this->load->helper('nominal');
+		if (!$this->session->has_userdata('session_id')) {
+			$this->session->set_flashdata('alert', 'belum_login');
+			redirect(base_url('login'));
+		}
 	}
 
 	public function index(){
