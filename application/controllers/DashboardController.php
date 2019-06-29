@@ -6,6 +6,8 @@ class DashboardController extends CI_Controller{
 	public function __construct()
 	{
 		parent::__construct();
+		$model = array('DashboardModel');
+		$this->load->model($model);
 		if (!$this->session->has_userdata('session_id')) {
 			$this->session->set_flashdata('alert', 'belum_login');
 			redirect(base_url('login'));
@@ -13,8 +15,11 @@ class DashboardController extends CI_Controller{
 	}
 
 	public function index(){
+		$data = array(
+			'jumlah_karyawan' => $this->DashboardModel->jumlah_karyawan()
+		);
 		$this->load->view('templates/header');
-		$this->load->view('backend/index');
+		$this->load->view('backend/index',$data);
 		$this->load->view('templates/footer');
 	}
 }

@@ -55,12 +55,16 @@ $route['karyawan/tambah'] = 'KaryawanController/tambah';
 $route['karyawan/lihat/(:any)'] = 'KaryawanController/lihat/$1';
 $route['karyawan/update'] = 'KaryawanController/update';
 $route['karyawan/hapus/(:any)'] = 'KaryawanController/hapus/$1';
+$route['karyawan/ajaxIndex'] = 'KaryawanController/ajaxIndex';
 
 $route['gaji'] = 'GajiController';
 $route['gaji/tambah'] = 'GajiController/tambah';
 $route['gaji/updateForm/(:any)'] = 'GajiController/updateForm/$1';
 $route['gaji/update'] = 'GajiController/update';
 $route['gaji/hapus/(:any)'] = 'GajiController/hapus/$1';
+
+$route['absen'] = 'AbsenController';
+$route['absen/tambah'] = 'AbsenController/tambah';
 
 $route['login'] = 'AuthController/login';
 $route['logout'] = 'AuthController/logout';

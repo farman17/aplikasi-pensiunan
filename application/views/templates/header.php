@@ -36,6 +36,9 @@
 		  href="<?= base_url() ?>assets/vendors/css/pickers/pickadate/default.time.css">
 
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/vendors/css/forms/selects/select2.min.css">
+
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/plugins/easy-autocomplete/easy-autocomplete.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/plugins/easy-autocomplete/easy-autocomplete.themes.min.css">
 	<!-- END: Vendor CSS-->
 
 	<!-- BEGIN: Theme CSS-->
@@ -139,7 +142,7 @@
 					</li>
 				</ul>
 			</li>
-			<li class=" nav-item"><a href="<?= base_url() ?>"><i class="ft-users"></i><span class="menu-title"
+			<li class=" nav-item"><a href="<?= base_url('absen') ?>"><i class="ft-users"></i><span class="menu-title"
 																							data-i18n="">Absen</span></a>
 			</li>
 			<li class=" nav-item"><a href="<?= base_url() ?>"><i class="ft-file"></i><span class="menu-title"

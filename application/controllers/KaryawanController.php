@@ -101,4 +101,8 @@ class KaryawanController extends CI_Controller{
 		}
 	}
 
+	public function ajaxIndex(){
+		echo json_encode($this->KaryawanModel->lihat_karyawan());
+	}
+
 }

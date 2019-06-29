@@ -82,16 +82,6 @@
 					endforeach;
 					?>
 					</tbody>
-					<tfoot>
-					<tr>
-						<th>No</th>
-						<th>Nama</th>
-						<th>Jabatan</th>
-						<th>Tanggal Bergabung</th>
-						<th>Nomor HP</th>
-						<th>Aksi</th>
-					</tr>
-					</tfoot>
 				</table>
 			</div>
 		</div>
@@ -152,7 +142,7 @@
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="jabatan">Jabatan</label>
-					<select name="jabatan" id="jabatan" class="select2 form-control" style="width: 100%">
+					<select name="jabatan" id="basicSelect" class="form-control">
 						<?php
 						foreach ($jabatan as $key => $value):
 							?>

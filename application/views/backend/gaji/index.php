@@ -67,14 +67,6 @@
 					endforeach;
 					?>
 					</tbody>
-					<tfoot>
-					<tr>
-						<th>No</th>
-						<th>Jabatan</th>
-						<th>Gaji</th>
-						<th>Aksi</th>
-					</tr>
-					</tfoot>
 				</table>
 			</div>
 		</div>

@@ -203,3 +203,28 @@ if (!function_exists('longdate_indo')) {
 		return $nama_hari . ',' . $tgl . ' ' . $bulan . ' ' . $thn;
 	}
 }
+
+
+//Long date indo Format
+if (!function_exists('hari_indo')) {
+	function hari_indo($nama)
+	{
+		$nama_hari = "";
+		if ($nama == "Sunday") {
+			$nama_hari = "Minggu";
+		} else if ($nama == "Monday") {
+			$nama_hari = "Senin";
+		} else if ($nama == "Tuesday") {
+			$nama_hari = "Selasa";
+		} else if ($nama == "Wednesday") {
+			$nama_hari = "Rabu";
+		} else if ($nama == "Thursday") {
+			$nama_hari = "Kamis";
+		} else if ($nama == "Friday") {
+			$nama_hari = "Jumat";
+		} else if ($nama == "Saturday") {
+			$nama_hari = "Sabtu";
+		}
+		return $nama_hari;
+	}
+}

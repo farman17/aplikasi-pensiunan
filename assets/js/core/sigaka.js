@@ -113,7 +113,7 @@ $(document).ready(function () {
 				console.log(response.status + 'error');
 			}
 		});
-	})
+	});
 
 	// ------------------------------------------------------------------------------------------
 
@@ -123,6 +123,42 @@ $(document).ready(function () {
 			'<a href="'+root+'karyawan/hapus/'+id+'" class="btn btn-danger btn-bg-gradient-x-red-pink">Hapus</a>';
 		$('#hapuskaryawan').html(html);
 	});
+
+
+	// ------------------------------------------------------------------------------------------
+	// easy autocomplete
+	// ------------------------------------------------------------------------------------------
+	var options = {
+		url : root + 'karyawan/ajaxIndex',
+		getValue: 'karyawan_nama',
+		adjustWidth : false,
+		list: {
+			sort: {
+				enabled: true
+			},
+			showAnimation: {
+				type: "fade", //normal|slide|fade
+				time: 400,
+				callback: function() {}
+			},
+
+			hideAnimation: {
+				type: "slide", //normal|slide|fade
+				time: 400,
+				callback: function() {}
+			},
+			match: {
+				enabled: true
+			},
+			onSelectItemEvent: function() {
+				var value = $("#nama_karyawan").getSelectedItemData().karyawan_id;
+
+				$("#id_karyawan").val(value).trigger("change");
+			}
+		}
+	};
+
+	$('#nama_karyawan').easyAutocomplete(options);
 
 	// ------------------------------------------------------------------------------------------
 	// end
