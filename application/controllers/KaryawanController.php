@@ -6,7 +6,7 @@ class KaryawanController extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
-		$model = array('GajiModel','KaryawanModel');
+		$model = array('JabatanModel','KaryawanModel');
 		$helper = array('tgl_indo_helper');
 		$this->load->model($model);
 		$this->load->helper($helper);
@@ -18,7 +18,7 @@ class KaryawanController extends CI_Controller{
 
     public function index(){
     	$data['karyawan'] = $this->KaryawanModel->lihat_karyawan();
-    	$data['jabatan'] = $this->GajiModel->lihat_gaji();
+    	$data['jabatan'] = $this->JabatanModel->lihat_jabatan();
 		$this->load->view('templates/header');
 		$this->load->view('backend/karyawan/index',$data);
 		$this->load->view('templates/footer');
@@ -43,7 +43,7 @@ class KaryawanController extends CI_Controller{
 				'karyawan_alamat' => $alamat,
 				'karyawan_tanggal_gabung' => $tanggalGabung,
 				'karyawan_nomor_hp' => $nomorHp,
-				'karyawan_gaji_id' => $gajiId
+				'karyawan_jabatan_id' => $gajiId
 			);
 			$save = $this->KaryawanModel->tambah_karyawan($data);
 			if ($save>0){
@@ -78,7 +78,7 @@ class KaryawanController extends CI_Controller{
 				'karyawan_alamat' => $alamat,
 				'karyawan_tanggal_gabung' => $tanggalGabung,
 				'karyawan_nomor_hp' => $nomorHp,
-				'karyawan_gaji_id' => $gajiId
+				'karyawan_jabatan_id' => $gajiId
 			);
 			$save = $this->KaryawanModel->update_karyawan($id,$data);
 			if ($save>0){

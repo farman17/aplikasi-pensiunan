@@ -2,11 +2,11 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class GajiController extends CI_Controller{
+class JabatanController extends CI_Controller{
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('GajiModel');
+		$this->load->model('JabatanModel');
 		$this->load->helper('nominal');
 		if (!$this->session->has_userdata('session_id')) {
 			$this->session->set_flashdata('alert', 'belum_login');
@@ -15,36 +15,36 @@ class GajiController extends CI_Controller{
 	}
 
 	public function index(){
-		$data['gaji'] = $this->GajiModel->lihat_gaji();
+		$data['jabatan'] = $this->JabatanModel->lihat_jabatan();
 		$this->load->view('templates/header');
-		$this->load->view('backend/gaji/index',$data);
+		$this->load->view('backend/jabatan/index',$data);
 		$this->load->view('templates/footer');
 	}
 
 	public function tambah(){
 		if (isset($_POST['simpan'])){
 			$generate = substr(time(), 5);
-			$id = 'GJI-' . $generate;
+			$id = 'JAB-' . $generate;
 			$jabatan = $this->input->post('jabatan');
 			$gaji = $this->input->post('gaji');
 			$data = array(
-				'gaji_id' => $id,
-				'gaji_jabatan' => $jabatan,
-				'gaji_jumlah' => $gaji
+				'jabatan_id' => $id,
+				'jabatan_nama' => $jabatan,
+				'jabatan_gaji' => $gaji
 			);
-			$save = $this->GajiModel->tambah_gaji($data);
+			$save = $this->JabatanModel->tambah_jabatan($data);
 			if ($save>0){
-				$this->session->set_flashdata('alert', 'tambah_gaji');
-				redirect('gaji');
+				$this->session->set_flashdata('alert', 'tambah_jabatan');
+				redirect('jabatan');
 			}
 			else{
-				redirect('gaji');
+				redirect('jabatan');
 			}
 		}
 	}
 
 	public function updateForm($id){
-		$data = $this->GajiModel->lihat_satu_gaji($id);
+		$data = $this->JabatanModel->lihat_satu_jabatan($id);
 		echo json_encode($data);
 	}
 
@@ -54,27 +54,27 @@ class GajiController extends CI_Controller{
 			$jabatan = $this->input->post('jabatan');
 			$gaji = $this->input->post('gaji');
 			$data = array(
-				'gaji_jabatan' => $jabatan,
-				'gaji_jumlah' => $gaji
+				'jabatan_nama' => $jabatan,
+				'jabatan_gaji' => $gaji
 			);
-			$update = $this->GajiModel->update_gaji($id,$data);
+			$update = $this->JabatanModel->update_jabatan($id,$data);
 			if ($update > 0){
-				$this->session->set_flashdata('alert', 'update_gaji');
-				redirect('gaji');
+				$this->session->set_flashdata('alert', 'update_jabatan');
+				redirect('jabatan');
 			}
 			else{
-				redirect('gaji');
+				redirect('jabatan');
 			}
 		}
 	}
 
 	public function hapus($id){
-		$hapus = $this->GajiModel->hapus_gaji($id);
+		$hapus = $this->JabatanModel->hapus_jabatan($id);
 		if ($hapus > 0){
-			$this->session->set_flashdata('alert', 'hapus_gaji');
-			redirect('gaji');
+			$this->session->set_flashdata('alert', 'hapus_jabatan');
+			redirect('jabatan');
 		}else{
-			redirect('gaji');
+			redirect('jabatan');
 		}
 	}
 }

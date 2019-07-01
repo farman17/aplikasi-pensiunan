@@ -129,20 +129,20 @@
 	<div class="navigation-background"></div>
 	<div class="main-menu-content">
 		<ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-			<li class=" nav-item"><a href="<?= base_url() ?>"><i class="ft-home"></i><span class="menu-title"
+			<li class=" nav-item <?php if ($this->uri->segment(1) == null) echo 'active'?>"><a href="<?= base_url() ?>"><i class="ft-home"></i><span class="menu-title"
 																						   data-i18n="">Dashboard</span></a>
 			</li>
 			<li class=" nav-item"><a href="#"><i class="ft-layers"></i><span class="menu-title"
 																			 data-i18n="">Data Master</span></a>
 				<ul class="menu-content">
-					<li><a class="menu-item" href="<?= base_url('karyawan') ?>"><i class="ft-users"></i> Data
+					<li class="<?php if ($this->uri->segment(1) == 'karyawan') echo 'active'?>"><a class="menu-item" href="<?= base_url('karyawan') ?>"><i class="ft-users"></i> Data
 							Karyawan</a>
 					</li>
-					<li><a class="menu-item" href="<?= base_url('gaji') ?>"><i class="ft-box"></i> Data Gaji</a>
+					<li class="<?php if ($this->uri->segment(1) == 'jabatan') echo 'active'?>"><a class="menu-item" href="<?= base_url('jabatan') ?>"><i class="ft-box"></i> Data Jabatan</a>
 					</li>
 				</ul>
 			</li>
-			<li class=" nav-item"><a href="<?= base_url('absen') ?>"><i class="ft-users"></i><span class="menu-title"
+			<li class=" nav-item <?php if ($this->uri->segment(1) == 'absen') echo 'active'?>"><a href="<?= base_url('absen') ?>"><i class="ft-users"></i><span class="menu-title"
 																							data-i18n="">Absen</span></a>
 			</li>
 			<li class=" nav-item"><a href="<?= base_url() ?>"><i class="ft-file"></i><span class="menu-title"

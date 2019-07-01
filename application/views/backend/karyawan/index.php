@@ -59,7 +59,7 @@
 						<tr>
 							<td><?= $no ?></td>
 							<td><?= $value['karyawan_nama'] ?></td>
-							<td><?= $value['gaji_jabatan'] ?></td>
+							<td><?= $value['jabatan_nama'] ?></td>
 							<td><?= date_indo($value['karyawan_tanggal_gabung']) ?></td>
 							<td><?= $value['karyawan_nomor_hp'] ?></td>
 							<td>
@@ -146,7 +146,7 @@
 						<?php
 						foreach ($jabatan as $key => $value):
 							?>
-							<option value="<?= $value['gaji_id'] ?>"><?= $value['gaji_jabatan'] ?></option>
+							<option value="<?= $value['jabatan_id'] ?>"><?= $value['jabatan_nama'] ?></option>
 						<?php
 						endforeach;
 						?>
@@ -304,7 +304,7 @@
 						<?php
 						foreach ($jabatan as $key => $value):
 							?>
-							<option value="<?= $value['gaji_id'] ?>"><?= $value['gaji_jabatan'] ?></option>
+							<option value="<?= $value['jabatan_id'] ?>"><?= $value['jabatan_nama'] ?></option>
 						<?php
 						endforeach;
 						?>

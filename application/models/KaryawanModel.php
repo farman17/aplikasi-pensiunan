@@ -12,7 +12,7 @@ class KaryawanModel extends CI_Model{
 	public function lihat_karyawan(){
 		$this->db->select('*');
 		$this->db->from('sigaka_karyawan');
-		$this->db->join('sigaka_gaji', 'sigaka_gaji.gaji_id = sigaka_karyawan.karyawan_gaji_id');
+		$this->db->join('sigaka_jabatan', 'sigaka_jabatan.jabatan_id = sigaka_karyawan.karyawan_jabatan_id');
 		$this->db->order_by('karyawan_date_created','DESC');
 		$query = $this->db->get();
 		return $query->result_array();
@@ -26,7 +26,7 @@ class KaryawanModel extends CI_Model{
 	public function lihat_satu_karyawan($id){
 		$this->db->select('*');
 		$this->db->from('sigaka_karyawan');
-		$this->db->join('sigaka_gaji', 'sigaka_gaji.gaji_id = sigaka_karyawan.karyawan_gaji_id');
+		$this->db->join('sigaka_jabatan', 'sigaka_jabatan.jabatan_id = sigaka_karyawan.karyawan_jabatan_id');
 		$this->db->where('karyawan_id',$id);
 		$query = $this->db->get();
 		return $query->row_array();

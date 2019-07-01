@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 		<div class="card">
 			<?php
-			if ($this->session->flashdata('alert') == 'tambah_karyawan'):
+			if ($this->session->flashdata('alert') == 'tambah_jabatan'):
 				?>
 				<div class="alert alert-success alert-dismissible animated fadeInDown" id="feedback" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -11,7 +11,7 @@
 					Data berhasil ditambahkan
 				</div>
 			<?php
-			elseif ($this->session->flashdata('alert') == 'update_karyawan'):
+			elseif ($this->session->flashdata('alert') == 'update_jabatan'):
 				?>
 				<div class="alert alert-success alert-dismissible animated fadeInDown" id="feedback" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -20,7 +20,7 @@
 					Data berhasil diupdate
 				</div>
 			<?php
-			elseif ($this->session->flashdata('alert') == 'hapus_karyawan'):
+			elseif ($this->session->flashdata('alert') == 'hapus_jabatan'):
 				?>
 				<div class="alert alert-danger alert-dismissible animated fadeInDown" id="feedback" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -32,9 +32,9 @@
 			endif;
 			?>
 			<div class="card-header">
-				<h1 style="text-align: center">Data Gaji Karyawan</h1>
+				<h1 style="text-align: center">Data Jabatan</h1>
 				<button type="button" class="btn btn-primary btn-bg-gradient-x-purple-blue box-shadow-2" data-toggle="modal" data-target="#tambah">
-					<i class="ft-plus-circle"></i> Tambah data gaji
+					<i class="ft-plus-circle"></i> Tambah jabatan
 				</button>
 			</div>
 			<div class="card-body">
@@ -43,7 +43,7 @@
 					<tr>
 						<th>No</th>
 						<th>Jabatan</th>
-						<th>Gaji</th>
+						<th>Gaji perhari</th>
 						<th>Aksi</th>
 					</tr>
 					</thead>
@@ -51,15 +51,15 @@
 
 					<?php
 					$no = 1;
-					foreach ($gaji as $key=>$value):
+					foreach ($jabatan as $key=>$value):
 					?>
 					<tr>
 						<td><?=$no?></td>
-						<td><?=$value['gaji_jabatan']?></td>
-						<td>Rp. <?=nominal($value['gaji_jumlah'])?></td>
+						<td><?=$value['jabatan_nama']?></td>
+						<td>Rp. <?=nominal($value['jabatan_gaji'])?></td>
 						<td>
-							<button class="btn btn-success btn-sm  btn-bg-gradient-x-blue-green box-shadow-2 gaji-edit" data-toggle="modal" data-target="#ubah" value="<?=$value['gaji_id']?>"><i class="ft-edit"></i></button>
-							<button class="btn btn-danger btn-sm  btn-bg-gradient-x-red-pink box-shadow-2 gaji-hapus" data-toggle="modal" data-target="#hapus" value="<?=$value['gaji_id']?>"><i class="ft-trash"></i></button>
+							<button class="btn btn-success btn-sm  btn-bg-gradient-x-blue-green box-shadow-2 gaji-edit" data-toggle="modal" data-target="#ubah" value="<?=$value['jabatan_id']?>"><i class="ft-edit"></i></button>
+							<button class="btn btn-danger btn-sm  btn-bg-gradient-x-red-pink box-shadow-2 gaji-hapus" data-toggle="modal" data-target="#hapus" value="<?=$value['jabatan_id']?>"><i class="ft-trash"></i></button>
 						</td>
 					</tr>
 					<?php
@@ -78,12 +78,12 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h3 class="modal-title" id="myModalLabel35"> Tambah Data Gaji</h3>
+				<h3 class="modal-title" id="myModalLabel35"> Tambah Data Jabatan</h3>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<?= form_open('gaji/tambah')?>
+			<?= form_open('jabatan/tambah')?>
 				<div class="modal-body">
 					<fieldset class="form-group floating-label-form-group">
 						<label for="jabatan">Jabatan</label>
@@ -109,12 +109,12 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h3 class="modal-title" id="myModalLabel35"> Ubah Data Gaji</h3>
+				<h3 class="modal-title" id="myModalLabel35"> Ubah Data Jabatan</h3>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<?= form_open('gaji/update')?>
+			<?= form_open('jabatan/update')?>
 				<div class="modal-body" id="updateformgaji">
 
 				</div>
@@ -132,7 +132,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h3 class="modal-title" id="myModalLabel35"> Hapus Data Gaji ?</h3>
+				<h3 class="modal-title" id="myModalLabel35"> Hapus Data Jabatan ?</h3>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
