@@ -50,6 +50,7 @@
 	<link rel="stylesheet" type="text/css"
 		  href="<?= base_url() ?>assets/fonts/line-awesome/1.1/css/line-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/fonts/feather/style.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/fonts/simple-line-icons/style.min.css">
 	<!-- END: Theme CSS-->
 
 	<!-- BEGIN: Page CSS-->
@@ -138,12 +139,15 @@
 					<li class="<?php if ($this->uri->segment(1) == 'karyawan') echo 'active'?>"><a class="menu-item" href="<?= base_url('karyawan') ?>"><i class="ft-users"></i> Data
 							Karyawan</a>
 					</li>
-					<li class="<?php if ($this->uri->segment(1) == 'jabatan') echo 'active'?>"><a class="menu-item" href="<?= base_url('jabatan') ?>"><i class="ft-box"></i> Data Jabatan</a>
+					<li class="<?php if ($this->uri->segment(1) == 'jabatan') echo 'active'?>"><a class="menu-item" href="<?= base_url('jabatan') ?>"><i class="ft-award"></i> Data Jabatan</a>
 					</li>
 				</ul>
 			</li>
 			<li class=" nav-item <?php if ($this->uri->segment(1) == 'absen') echo 'active'?>"><a href="<?= base_url('absen') ?>"><i class="ft-users"></i><span class="menu-title"
 																							data-i18n="">Absen</span></a>
+			</li>
+			<li class=" nav-item <?php if ($this->uri->segment(1) == 'gaji') echo 'active'?>"><a href="<?= base_url('gaji') ?>"><i class="icon-wallet"></i><span class="menu-title"
+																																								data-i18n="">Gaji</span></a>
 			</li>
 			<li class=" nav-item"><a href="<?= base_url() ?>"><i class="ft-file"></i><span class="menu-title"
 																						   data-i18n="">Laporan</span></a>
