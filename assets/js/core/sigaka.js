@@ -28,11 +28,11 @@ $(document).ready(function () {
 						'<input type="hidden" value="'+id+'" name="id">' +
 						'<fieldset class="form-group floating-label-form-group">' +
 						'<label for="jabatan">Jabatan</label>' +
-						'<input type="text" class="form-control" name="jabatan" id="jabatan" value="'+response.jabatan_nama+'" placeholder="Jabatan" autocomplete="off">' +
+						'<input type="text" class="form-control" name="jabatan" id="jabatan" value="'+response.jabatan_nama+'" placeholder="Jabatan" autocomplete="off" required>' +
 						'</fieldset>' +
 						'<fieldset class="form-group floating-label-form-group">' +
 						'<label for="gaji">Gaji</label>' +
-						'<input type="text" class="form-control" name="gaji" id="gaji" value="'+response.jabatan_gaji+'" placeholder="Jumlah gaji" autocomplete="off">' +
+						'<input type="text" class="form-control" name="gaji" id="gaji" value="'+response.jabatan_gaji+'" placeholder="Jumlah gaji" autocomplete="off" required>' +
 						'</fieldset>';
 
 					console.log(html);
@@ -73,6 +73,7 @@ $(document).ready(function () {
 					$('#lihat_tl').val(response.karyawan_tanggal_lahir);
 					$('#lihat_alamat').val(response.karyawan_alamat);
 					$('#lihat_nohp').val(response.karyawan_nomor_hp);
+					$('#lihat_norek').val(response.karyawan_no_rekening);
 					$('#lihat_tg').val(response.karyawan_tanggal_gabung);
 					$('#lihat_jabatan_karyawan').val(response.jabatan_nama);
 					$('#lihat_gaji_pokok').val(formatRupiah(response.jabatan_gaji,'Rp. '));
@@ -103,6 +104,7 @@ $(document).ready(function () {
 					$('#edit_tl').val(response.karyawan_tanggal_lahir);
 					$('#edit_alamat').val(response.karyawan_alamat);
 					$('#edit_nohp').val(response.karyawan_nomor_hp);
+					$('#edit_norek').val(response.karyawan_no_rekening);
 					$('#edit_tg').val(response.karyawan_tanggal_gabung);
 					$('#edit_jabatan_karyawan').val(response.gaji_jabatan);
 					$('#edit_gaji_pokok').val(formatRupiah(response.gaji_jumlah,'Rp. '));

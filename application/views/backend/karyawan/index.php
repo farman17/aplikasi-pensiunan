@@ -104,18 +104,18 @@
 				<fieldset class="form-group floating-label-form-group">
 					<label for="nama">Nama</label>
 					<input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Karyawan"
-						   autocomplete="off">
+						   autocomplete="off" required>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="tempat">Tempat Lahir</label>
 					<input type="text" class="form-control" name="tempat_lahir" id="tempat" placeholder="Tempat Lahir"
-						   autocomplete="off">
+						   autocomplete="off" required>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="tl">Tanggal Lahir</label>
 					<div class='input-group'>
 						<input type="date" class="form-control" name="tanggal_lahir" id="tl" placeholder="Tanggal Lahir"
-							   autocomplete="off">
+							   autocomplete="off" required>
 						<div class="input-group-append">
 										<span class="input-group-text">
 											<span class="ft-calendar"></span>
@@ -126,13 +126,13 @@
 				<fieldset class="form-group floating-label-form-group">
 					<label for="alamat">Alamat</label>
 					<textarea class="form-control" id="alamat" rows="3" name="alamat" placeholder="Alamat"
-							  autocomplete="off"></textarea>
+							  autocomplete="off" required></textarea>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="tg">Tanggal Bergabung</label>
 					<div class='input-group'>
 						<input type="date" class="form-control" id="tg" name="tanggal_gabung"
-							   placeholder="Tanggal Bergabung" autocomplete="off">
+							   placeholder="Tanggal Bergabung" autocomplete="off" required>
 						<div class="input-group-append">
 										<span class="input-group-text">
 											<span class="ft-calendar"></span>
@@ -155,6 +155,11 @@
 				<fieldset class="form-group floating-label-form-group">
 					<label for="nohp">Nomor HP</label>
 					<input type="number" class="form-control" id="nohp" name="nomor_hp" placeholder="Nomor HP"
+						   autocomplete="off" required>
+				</fieldset>
+				<fieldset class="form-group floating-label-form-group">
+					<label for="norek">Nomor Rekening</label>
+					<input type="number" class="form-control" id="norek" name="nomor_rekening" placeholder="Nomor rekening boleh kosong"
 						   autocomplete="off">
 				</fieldset>
 			</div>
@@ -226,13 +231,18 @@
 						   placeholder="Jabatan" autocomplete="off" readonly>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_gaji_pokok">Gaji Pokok</label>
+					<label for="lihat_gaji_pokok">Gaji Perhari</label>
 					<input type="text" class="form-control" name="jabatan" id="lihat_gaji_pokok"
 						   placeholder="Gaji pokok" autocomplete="off" readonly>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="lihat_nohp">Nomor HP</label>
 					<input type="number" class="form-control" id="lihat_nohp" name="nomor_hp" placeholder="Nomor HP"
+						   autocomplete="off" readonly>
+				</fieldset>
+				<fieldset class="form-group floating-label-form-group">
+					<label for="lihat_norek">Nomor Rekening</label>
+					<input type="number" class="form-control" id="lihat_norek" name="nomor_rekening" placeholder="Nomor rekening boleh kosong"
 						   autocomplete="off" readonly>
 				</fieldset>
 			</div>
@@ -262,18 +272,18 @@
 					<label for="edit_nama">Nama</label>
 					<input type="hidden" id="karyawan_id" name="id">
 					<input type="text" class="form-control" name="nama" id="edit_nama" placeholder="Nama Karyawan"
-						   autocomplete="off">
+						   autocomplete="off" required>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="edit_tempat">Tempat Lahir</label>
 					<input type="text" class="form-control" name="tempat_lahir" id="edit_tempat" placeholder="Tempat Lahir"
-						   autocomplete="off">
+						   autocomplete="off" required>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="edit_tl">Tanggal Lahir</label>
 					<div class='input-group'>
 						<input type="date" class="form-control" name="tanggal_lahir" id="edit_tl" placeholder="Tanggal Lahir"
-							   autocomplete="off">
+							   autocomplete="off" required>
 						<div class="input-group-append">
 										<span class="input-group-text">
 											<span class="ft-calendar"></span>
@@ -284,13 +294,13 @@
 				<fieldset class="form-group floating-label-form-group">
 					<label for="edit_alamat">Alamat</label>
 					<textarea class="form-control" id="edit_alamat" rows="3" name="alamat" placeholder="Alamat"
-							  autocomplete="off"></textarea>
+							  autocomplete="off" required></textarea>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="edit_tg">Tanggal Bergabung</label>
 					<div class='input-group'>
 						<input type="date" class="form-control" id="edit_tg" name="tanggal_gabung"
-							   placeholder="Tanggal Bergabung" autocomplete="off">
+							   placeholder="Tanggal Bergabung" autocomplete="off" required>
 						<div class="input-group-append">
 							<span class="input-group-text">
 								<span class="ft-calendar"></span>
@@ -313,6 +323,11 @@
 				<fieldset class="form-group floating-label-form-group">
 					<label for="edit_nohp">Nomor HP</label>
 					<input type="number" class="form-control" id="edit_nohp" name="nomor_hp" placeholder="Nomor HP"
+						   autocomplete="off" required>
+				</fieldset>
+				<fieldset class="form-group floating-label-form-group">
+					<label for="edit_norek">Nomor Rekening</label>
+					<input type="number" class="form-control" id="edit_norek" name="nomor_rekening" placeholder="Nomor rekening boleh kosong"
 						   autocomplete="off">
 				</fieldset>
 			</div>

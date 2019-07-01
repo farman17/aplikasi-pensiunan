@@ -35,6 +35,7 @@ class KaryawanController extends CI_Controller{
 			$tanggalGabung = $this->input->post('tanggal_gabung');
 			$gajiId = $this->input->post('jabatan');
 			$nomorHp = $this->input->post('nomor_hp');
+			$nomorRek = $this->input->post('nomor_rekening');
 			$data = array(
 				'karyawan_id' => $id,
 				'karyawan_nama' => $nama,
@@ -43,6 +44,7 @@ class KaryawanController extends CI_Controller{
 				'karyawan_alamat' => $alamat,
 				'karyawan_tanggal_gabung' => $tanggalGabung,
 				'karyawan_nomor_hp' => $nomorHp,
+				'karyawan_no_rekening' => $nomorRek,
 				'karyawan_jabatan_id' => $gajiId
 			);
 			$save = $this->KaryawanModel->tambah_karyawan($data);
@@ -71,6 +73,7 @@ class KaryawanController extends CI_Controller{
 			$tanggalGabung = $this->input->post('tanggal_gabung');
 			$gajiId = $this->input->post('jabatan');
 			$nomorHp = $this->input->post('nomor_hp');
+			$nomorRek = $this->input->post('nomor_rekening');
 			$data = array(
 				'karyawan_nama' => $nama,
 				'karyawan_tempat_lahir' => $tempatLahir,
@@ -78,6 +81,7 @@ class KaryawanController extends CI_Controller{
 				'karyawan_alamat' => $alamat,
 				'karyawan_tanggal_gabung' => $tanggalGabung,
 				'karyawan_nomor_hp' => $nomorHp,
+				'karyawan_no_rekening' => $nomorRek,
 				'karyawan_jabatan_id' => $gajiId
 			);
 			$save = $this->KaryawanModel->update_karyawan($id,$data);

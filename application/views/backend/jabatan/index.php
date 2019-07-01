@@ -87,11 +87,11 @@
 				<div class="modal-body">
 					<fieldset class="form-group floating-label-form-group">
 						<label for="jabatan">Jabatan</label>
-						<input type="text" class="form-control" name="jabatan" id="jabatan" placeholder="Jabatan" autocomplete="off">
+						<input type="text" class="form-control" name="jabatan" id="jabatan" placeholder="Jabatan" autocomplete="off" required>
 					</fieldset>
 					<fieldset class="form-group floating-label-form-group">
 						<label for="gaji">Gaji</label>
-						<input type="text" class="form-control" name="gaji" id="gaji" placeholder="Jumlah gaji" autocomplete="off">
+						<input type="text" class="form-control" name="gaji" id="gaji" placeholder="Jumlah gaji" autocomplete="off" required>
 					</fieldset>
 
 				</div>
