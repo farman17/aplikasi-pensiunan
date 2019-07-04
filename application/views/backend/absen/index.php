@@ -47,8 +47,9 @@
 					<i class="ft-plus-circle"></i> Tambah data Absen
 				</button>
 			</div>
+			<hr>
 			<div class="card-body">
-				<table class="table table-bordered zero-configuration">
+				<table class="table table-bordered zero-configuration" style="width: 100%">
 					<thead>
 					<tr>
 						<td>No</td>
@@ -56,6 +57,7 @@
 						<td>Hari</td>
 						<td>Tanggal</td>
 						<td>Status</td>
+						<td style="text-align: center"><i class="ft-settings"></i></td>
 					</tr>
 					</thead>
 					<tbody>
@@ -73,9 +75,40 @@
 							?>
 						</td>
 						<td>
-							<div class="badge badge-primary">
-								Tidak lembur
-							</div>
+							<?php
+							if ($value['absen_status'] == 'normal'):
+								?>
+								<div class="badge badge-primary">
+									<i class="ft-sun"></i> Normal
+								</div>
+							<?php
+							elseif ($value['absen_status'] == 'lembur'):
+								?>
+								<div class="badge badge-success">
+									<i class="ft-moon"></i> Lembur
+								</div>
+							<?php
+							endif;
+							?>
+						</td>
+						<td>
+							<?php
+							if ($value['absen_status'] == 'normal'):
+								?>
+								<button
+									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 absen-lembur"
+									data-toggle="modal" data-target="#lembur" value="<?= $value['absen_id'] ?>"
+									title="<?= $value['karyawan_nama'] ?> lembur? "><i class="ft-moon"></i></button>
+							<?php
+							elseif ($value['absen_status'] == 'lembur'):
+								?>
+								<div class="badge badge-success">
+									Lembur
+								</div>
+							<?php
+							endif;
+							?>
+
 						</td>
 					</tr>
 					<?php
@@ -120,6 +153,27 @@
 				<input type="submit" class="btn btn-primary btn-bg-gradient-x-blue-cyan" name="simpan" value="Simpan">
 			</div>
 			<?=form_close()?>
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal lembur -->
+<div class="modal fade text-left" id="lembur" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="myModalLabel35"> Karyawan Lembur ?</h3>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-footer">
+				<input type="reset" class="btn btn-secondary btn-bg-gradient-x-blue-cyan" data-dismiss="modal" value="Tutup">
+				<div id="tombol-lembur">
+
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

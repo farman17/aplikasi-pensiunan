@@ -107,4 +107,20 @@ class AbsenController extends CI_Controller
 			}
 		}
 	}
+
+	public function lembur($id){
+		$data = array(
+			'absen_status' => 'lembur'
+		);
+
+		$cekAbsen = $this->AbsenModel->lihat_satu_absen($id);
+		var_dump($cekAbsen['karyawan_id']);die;
+		$update = $this->AbsenModel->update_absen($id,$data);
+		if ($update > 0) {
+			$this->session->set_flashdata('alert', 'update_absen');
+			redirect('absen');
+		} else {
+			redirect('absen');
+		}
+	}
 }

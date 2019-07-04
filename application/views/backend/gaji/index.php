@@ -35,7 +35,7 @@
 				<h1 style="text-align: center">Gaji Karyawan</h1>
 			</div>
 			<div class="card-body">
-				<table class="table table-bordered zero-configuration">
+				<table class="table table-bordered zero-configuration" style="width: 100%">
 					<thead>
 					<tr>
 						<td>No</td>
@@ -44,7 +44,7 @@
 						<td>Tanggal Gabung</td>
 						<td>Gaji Bulan Ini</td>
 						<td>Gaji Bulan ke</td>
-						<td>Aksi</td>
+						<td style="text-align: center"><i class="ft-settings"></i></td>
 					</tr>
 					</thead>
 					<tbody>

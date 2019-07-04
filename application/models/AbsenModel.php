@@ -18,6 +18,15 @@ class AbsenModel extends CI_Model{
 		return $query->result_array();
 	}
 
+	public function lihat_satu_absen($id){
+		$this->db->select('*');
+		$this->db->from('sigaka_absen');
+		$this->db->join('sigaka_karyawan', 'sigaka_karyawan.karyawan_id = sigaka_absen.absen_karyawan_id');
+		$this->db->where('absen_id',$id);
+		$query = $this->db->get();
+		return $query->row_array();
+	}
+
 	public function tambah_absen($data){
 		$this->db->insert('sigaka_absen', $data);
 		return $this->db->affected_rows();
@@ -30,5 +39,11 @@ class AbsenModel extends CI_Model{
 		$this->db->like('absen_date_created',$tanggal);
 		$query = $this->db->get();
 		return $query->row_array();
+	}
+
+	public function update_absen($id,$data){
+		$this->db->where('absen_id', $id);
+		$this->db->update('sigaka_absen', $data);
+		return $this->db->affected_rows();
 	}
 }

@@ -44,7 +44,7 @@
 						<th>No</th>
 						<th>Jabatan</th>
 						<th>Gaji perhari</th>
-						<th>Aksi</th>
+						<td style="text-align: center"><i class="ft-settings"></i></td>
 					</tr>
 					</thead>
 					<tbody>

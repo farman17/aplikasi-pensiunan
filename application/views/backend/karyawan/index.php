@@ -48,7 +48,7 @@
 						<th>Jabatan</th>
 						<th>Tanggal Bergabung</th>
 						<th>Nomor HP</th>
-						<th>Aksi</th>
+						<td style="text-align: center"><i class="ft-settings"></i></td>
 					</tr>
 					</thead>
 					<tbody>
