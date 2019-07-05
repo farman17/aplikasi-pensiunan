@@ -84,7 +84,7 @@
 							<?php
 							elseif ($value['absen_status'] == 'lembur'):
 								?>
-								<div class="badge badge-success">
+								<div class="badge badge-secondary">
 									<i class="ft-moon"></i> Lembur
 								</div>
 							<?php
@@ -102,9 +102,10 @@
 							<?php
 							elseif ($value['absen_status'] == 'lembur'):
 								?>
-								<div class="badge badge-success">
-									Lembur
-								</div>
+								<button
+									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 absen-lembur"
+									data-toggle="modal" data-target="#lembur" value="<?= $value['absen_id'] ?>"
+									title="<?= $value['karyawan_nama'] ?> lembur " disabled><i class="ft-moon"></i></button>
 							<?php
 							endif;
 							?>
