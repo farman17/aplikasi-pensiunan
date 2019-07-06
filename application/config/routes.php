@@ -68,6 +68,7 @@ $route['absen/tambah'] = 'AbsenController/tambah';
 $route['absen/lembur/(:any)'] = 'AbsenController/lembur/$1';
 
 $route['gaji'] = 'GajiController';
+$route['gaji/lihat/(:any)'] = 'GajiController/lihat/$1';
 
 $route['login'] = 'AuthController/login';
 $route['logout'] = 'AuthController/logout';
