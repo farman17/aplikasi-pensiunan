@@ -5,7 +5,7 @@
 
 
 <!-- BEGIN: Customizer-->
-<div class="customizer border-left-blue-grey border-left-lighten-4 d-none d-xl-block"><a class="customizer-close" href="#"><i class="ft-x font-medium-3"></i></a><a class="customizer-toggle bg-primary box-shadow-3" href="#" id="customizer-toggle-setting"><i class="ft-settings font-medium-3 spinner white"></i></a><div class="customizer-content p-2">
+<div class="customizer border-left-blue-grey border-left-lighten-4 d-none d-xl-block d-print-none"><a class="customizer-close" href="#"><i class="ft-x font-medium-3"></i></a><a class="customizer-toggle bg-primary box-shadow-3" href="#" id="customizer-toggle-setting"><i class="ft-settings font-medium-3 spinner white"></i></a><div class="customizer-content p-2">
         <h5 class="mt-1 mb-1 text-bold-500">Navbar Color Options</h5>
         <div class="navbar-color-options clearfix">
             <div class="gradient-colors mb-1 clearfix">
@@ -133,7 +133,7 @@
 
 
 <!-- BEGIN: Footer-->
-<footer class="footer footer-static footer-light navbar-border navbar-shadow">
+<footer class="footer footer-static footer-light navbar-border navbar-shadow d-print-none">
     <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">2019  &copy; Copyright <a class="text-bold-800 grey darken-2" href="https://themeselection.com/" target="_blank">ThemeSelection</a></span>
         <ul class="list-inline float-md-right d-block d-md-inline-blockd-none d-lg-block mb-0">
             <li class="list-inline-item"><a class="my-1" href="https://themeselection.com/" target="_blank"> More themes</a></li>

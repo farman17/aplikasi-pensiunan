@@ -191,10 +191,10 @@ $(document).ready(function () {
 					$('#gaji_lihat_nama').val(response.karyawan_nama);
 					$('#gaji_lihat_jabatan').val(response.jabatan_nama);
 					$('#gaji_lihat_tg').val(response.karyawan_tanggal_gabung);
-					$('#gaji_lihat_lembur').val(formatRupiah(response.gaji_lembur));
-					$('#gaji_lihat_gaji').val(formatRupiah(response.gaji_total));
+					$('#gaji_lihat_lembur').val(formatRupiah(response.gaji_lembur,'Rp. '));
+					$('#gaji_lihat_gaji').val(formatRupiah(response.gaji_total,'Rp. '));
 					total = parseInt(response.gaji_lembur) + parseInt(response.gaji_total);
-					$('#gaji_lihat_total').val(formatRupiah(total.toString()));
+					$('#gaji_lihat_total').val(formatRupiah(total.toString(),'Rp. '));
 					$('#gaji_lihat_bulan').val(response.gaji_bulan_ke);
 					console.log(response);
 				}
@@ -204,6 +204,34 @@ $(document).ready(function () {
 			}
 		});
 	});
+
+	$('.gaji-slip').click(function (e) {
+		e.preventDefault();
+		var id = $(this).val();
+		var getUrl = root + 'gaji/lihat/' + id;
+		var total = 0;
+		$.ajax({
+			url : getUrl,
+			type : 'ajax',
+			dataType : 'json',
+			success: function (response) {
+				if (response != null){
+					$('#slip-nama').html(response.karyawan_nama);
+					$('#slip-jabatan').html(response.jabatan_nama);
+					$('#slip-nohp').html(response.karyawan_nomor_hp);
+					$('#slip-lembur').html(formatRupiah(response.gaji_lembur));
+					$('#slip-gaji').html(formatRupiah(response.gaji_total));
+					total = parseInt(response.gaji_lembur) + parseInt(response.gaji_total);
+					$('#slip-total').html(formatRupiah(total.toString()));
+					console.log(response);
+				}
+			},
+			error: function (response) {
+				console.log(response.status + 'error');
+			}
+		});
+	});
+
 
 
 	// ------------------------------------------------------------------------------------------

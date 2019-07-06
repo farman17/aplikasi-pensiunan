@@ -77,7 +77,7 @@
 	  data-color="bg-gradient-x-purple-blue" data-col="2-columns">
 
 <!-- BEGIN: Header-->
-<nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light">
+<nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light d-print-none">
 	<div class="navbar-wrapper">
 		<div class="navbar-container content">
 			<div class="collapse navbar-collapse show" id="navbar-mobile">
@@ -94,7 +94,7 @@
 					<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link"
 																   href="#" data-toggle="dropdown"> <span
 								class="avatar avatar-online"><img
-									src="<?= base_url() ?>assets/images/portrait/small/avatar-s-19.png"
+									src="<?= base_url() ?>assets/images/portrait/small/profil-circle-512.png"
 									alt="avatar"></span></a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<div class="arrow_box_right"><a class="dropdown-item" href="#"><span
@@ -116,7 +116,7 @@
 
 
 <!-- BEGIN: Main Menu-->
-<div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true"
+<div class="main-menu menu-fixed menu-light menu-accordion d-print-none menu-shadow " data-scroll-to-active="true"
 	 data-img="<?= base_url() ?>assets/images/backgrounds/02.jpg">
 	<div class="navbar-header">
 		<ul class="nav navbar-nav flex-row">
@@ -143,11 +143,14 @@
 					</li>
 				</ul>
 			</li>
-			<li class=" nav-item <?php if ($this->uri->segment(1) == 'absen') echo 'active'?>"><a href="<?= base_url('absen') ?>"><i class="ft-users"></i><span class="menu-title"
+			<li class=" nav-item <?php if ($this->uri->segment(1) == 'absen') echo 'active'?>"><a href="<?= base_url('absen') ?>"><i class="ft-user-check"></i><span class="menu-title"
 																							data-i18n="">Absen</span></a>
 			</li>
 			<li class=" nav-item <?php if ($this->uri->segment(1) == 'gaji') echo 'active'?>"><a href="<?= base_url('gaji') ?>"><i class="icon-wallet"></i><span class="menu-title"
 																																								data-i18n="">Gaji</span></a>
+			</li>
+			<li class=" nav-item <?php if ($this->uri->segment(1) == 'pinjam') echo 'active'?>"><a href="<?= base_url('pinjam') ?>"><i class="ft-calendar"></i><span class="menu-title"
+																																									 data-i18n="">Pinjaman</span></a>
 			</li>
 			<li class=" nav-item"><a href="<?= base_url() ?>"><i class="ft-file"></i><span class="menu-title"
 																						   data-i18n="">Laporan</span></a>
