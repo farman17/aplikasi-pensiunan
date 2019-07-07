@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 		<div class="card box-shadow-2">
 			<?php
-			if ($this->session->flashdata('alert') == 'tambah_absen'):
+			if ($this->session->flashdata('alert') == 'tambah_pinjam'):
 				?>
 				<div class="alert alert-success alert-dismissible animated fadeInDown" id="feedback" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -11,7 +11,7 @@
 					Berhasil absen
 				</div>
 			<?php
-			elseif ($this->session->flashdata('alert') == 'update_absen'):
+			elseif ($this->session->flashdata('alert') == 'update_pinjam'):
 				?>
 				<div class="alert alert-success alert-dismissible animated fadeInDown" id="feedback" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -20,7 +20,7 @@
 					Data berhasil diupdate
 				</div>
 			<?php
-			elseif ($this->session->flashdata('alert') == 'hapus_absen'):
+			elseif ($this->session->flashdata('alert') == 'hapus_pinjam'):
 				?>
 				<div class="alert alert-danger alert-dismissible animated fadeInDown" id="feedback" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -49,6 +49,28 @@
 						<th>Sudah Dibayar</th>
 					</tr>
 					</thead>
+					<tbody>
+					<?php
+					$no = 1;
+					foreach ($pinjam as $key=>$value):
+					?>
+					<tr>
+						<td><?=$no?></td>
+						<td><?=$value['karyawan_nama']?></td>
+						<td>Rp. <?=nominal($value['pinjam_jumlah'])?></td>
+						<td>
+							<?php
+							$tanggal = explode(' ',$value['pinjam_date_created']);
+							echo date_indo($tanggal[0]);
+							?>
+						</td>
+						<td>Rp. <?=nominal($value['pinjam_bayar'])?></td>
+					</tr>
+					<?php
+					$no++;
+					endforeach;
+					?>
+					</tbody>
 				</table>
 			</div>
 		</div>

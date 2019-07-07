@@ -9,5 +9,18 @@ class PinjamModel extends CI_Model{
 		$this->load->database();
 	}
 
+	public function lihat_pinjaman(){
+		$this->db->select('*');
+		$this->db->from('sigaka_pinjam');
+		$this->db->join('sigaka_karyawan', 'sigaka_karyawan.karyawan_id = sigaka_pinjam.pinjam_karyawan_id');
+		$this->db->order_by('karyawan_date_created','DESC');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
+	public function tambah_pinjaman($data){
+		$this->db->insert('sigaka_pinjam', $data);
+		return $this->db->affected_rows();
+	}
 
 }

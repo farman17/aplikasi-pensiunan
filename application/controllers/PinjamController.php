@@ -6,9 +6,9 @@ class PinjamController extends CI_Controller{
 	public function __construct()
 	{
 		parent::__construct();
-//		$model = array('GajiModel');
+		$model = array('PinjamModel');
 		$helper = array('tgl_indo','nominal');
-//		$this->load->model($model);
+		$this->load->model($model);
 		$this->load->helper($helper);
 		if (!$this->session->has_userdata('session_id')) {
 			$this->session->set_flashdata('alert', 'belum_login');
@@ -18,10 +18,32 @@ class PinjamController extends CI_Controller{
 
 	public function index(){
 		$data = array(
-//			'gaji' => $this->GajiModel->lihat_gaji()
+			'pinjam' => $this->PinjamModel->lihat_pinjaman()
 		);
 		$this->load->view('templates/header');
 		$this->load->view('backend/pinjam/index',$data);
 		$this->load->view('templates/footer');
+	}
+
+	public function tambah(){
+		if (isset($_POST['simpan'])){
+			$generate = substr(time(), 5);
+			$id = 'PJM-' . $generate;
+			$nama = $this->input->post('nama');
+			$jumlah = $this->input->post('jumlah');
+			$data = array(
+				'pinjam_id' => $id,
+				'pinjam_karyawan_id' => $nama,
+				'pinjam_jumlah' => $jumlah,
+			);
+			$save = $this->PinjamModel->tambah_pinjaman($data);
+			if ($save>0){
+				$this->session->set_flashdata('alert', 'tambah_pinjam');
+				redirect('pinjam');
+			}
+			else{
+				redirect('pinjam');
+			}
+		}
 	}
 }
