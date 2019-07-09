@@ -232,7 +232,14 @@ $(document).ready(function () {
 		});
 	});
 
+	// ------------------------------------------------------------------------------------------
 
+	$('.gaji-bayar').click(function () {
+		var id = $(this).val();
+		var html = '' +
+			'<a href="'+root+'gaji/bayar/'+id+'" class="btn btn-danger btn-bg-gradient-x-blue-cyan">Konfirmasi</a>';
+		$('#tombol-konfirmasi').html(html);
+	});
 
 	// ------------------------------------------------------------------------------------------
 	// end

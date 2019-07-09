@@ -29,4 +29,18 @@ class GajiController extends CI_Controller{
 		$data = $this->GajiModel->lihat_satu_gaji_by_id($id);
 		echo json_encode($data);
 	}
+
+	public function bayar($id){
+		$data = array(
+			'gaji_status' => 'sudah'
+		);
+		$save = $this->GajiModel->update_gaji($id,$data);
+		if ($save>0){
+			$this->session->set_flashdata('alert', 'update_gaji');
+			redirect('gaji');
+		}
+		else{
+			redirect('gaji');
+		}
+	}
 }

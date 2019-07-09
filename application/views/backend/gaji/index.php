@@ -11,7 +11,7 @@
 					Berhasil absen
 				</div>
 			<?php
-			elseif ($this->session->flashdata('alert') == 'update_absen'):
+			elseif ($this->session->flashdata('alert') == 'update_gaji'):
 				?>
 				<div class="alert alert-success alert-dismissible animated fadeInDown" id="feedback" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -58,7 +58,19 @@
 							<td><?= $value['jabatan_nama'] ?></td>
 							<td>Rp. <?= nominal($value['gaji_lembur'] + $value['gaji_total']) ?></td>
 							<td><?= $value['gaji_bulan_ke'] ?></td>
-							<td><div class="badge badge-warning"><i class="ft-x-circle"></i> Belum</div></td>
+							<td>
+								<?php
+								if ($value['gaji_status'] == 'belum'):
+									?>
+									<div class="badge badge-warning"><i class="ft-x-circle"></i> Belum</div>
+								<?php
+								else:
+									?>
+									<div class="badge badge-success"><i class="ft-check-circle"></i> Sudah</div>
+								<?php
+								endif;
+								?>
+							</td>
 							<td>
 								<button
 									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-lihat"
@@ -68,6 +80,23 @@
 									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-slip"
 									data-toggle="modal" data-target="#slip" value="<?= $value['gaji_id'] ?>"
 									title="Lihat slip gaji"><i class="ft-printer"></i></button>
+								<?php
+								if ($value['gaji_status'] == 'belum'):
+								?>
+								<button
+									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
+									data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
+									title="Sudah bayar ?"><i class="ft-check-square"></i></button>
+								<?php
+								else:
+								?>
+								<button
+									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
+									data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
+									title="Sudah bayar" disabled><i class="ft-check-square"></i></button>
+								<?php
+								endif;
+								?>
 							</td>
 						</tr>
 
@@ -154,17 +183,21 @@
 	.tengah {
 		text-align: center;
 	}
+
 	.kotak {
-		border: 1px solid rgba(0,0,0,0.1);
+		border: 1px solid rgba(0, 0, 0, 0.1);
 		padding: 5px;
 	}
+
 	@media print {
 		body * {
 			visibility: hidden;
 		}
+
 		.kotak, .kotak * {
 			visibility: visible;
 		}
+
 		.kotak {
 			position: absolute;
 			width: 100%;
@@ -275,7 +308,7 @@
 					<div class="row">
 						<div class="col-6"></div>
 						<div class="col-6">
-							<p>Pekanbaru, <?=date_indo(date('Y-m-d'))?></p>
+							<p>Pekanbaru, <?= date_indo(date('Y-m-d')) ?></p>
 							<p>Manajer</p>
 							<br>
 							<br>
@@ -288,7 +321,30 @@
 			<div class="modal-footer d-print-none">
 				<input type="reset" class="btn btn-secondary btn-bg-gradient-x-red-pink" data-dismiss="modal"
 					   value="Tutup">
-				<button onclick="window.print()" class="btn btn-primary btn-bg-gradient-x-purple-blue"><i class="fa fa-print"></i> Cetak</button>
+				<button onclick="window.print()" class="btn btn-primary btn-bg-gradient-x-purple-blue"><i
+						class="fa fa-print"></i> Cetak
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal hapus -->
+<div class="modal fade text-left" id="bayar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="myModalLabel35"> Karyawan sudah menerima gaji ?</h3>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-footer">
+				<input type="reset" class="btn btn-secondary btn-bg-gradient-x-red-pink" data-dismiss="modal" value="Tutup">
+				<div id="tombol-konfirmasi">
+
+				</div>
 			</div>
 		</div>
 	</div>
