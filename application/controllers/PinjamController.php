@@ -18,9 +18,10 @@ class PinjamController extends CI_Controller{
 
 	public function index(){
 		$data = array(
-			'pinjam' => $this->PinjamModel->lihat_pinjaman()
+			'pinjam' => $this->PinjamModel->lihat_pinjaman(),
+			'title' => 'Pinjaman'
 		);
-		$this->load->view('templates/header');
+		$this->load->view('templates/header',$data);
 		$this->load->view('backend/pinjam/index',$data);
 		$this->load->view('templates/footer');
 	}

@@ -223,6 +223,23 @@ $(document).ready(function () {
 					$('#slip-gaji').html(formatRupiah(response.gaji_total));
 					total = parseInt(response.gaji_lembur) + parseInt(response.gaji_total);
 					$('#slip-total').html(formatRupiah(total.toString()));
+					var getUrl2 = root + 'gaji/pinjam/' + id;
+					$.ajax({
+						url : getUrl2,
+						type : 'ajax',
+						dataType : 'json',
+						success : function (response) {
+							if (response != null){
+								$('.slip-pinjam').html(formatRupiah(response.pinjam_jumlah.toString()));
+							}
+							else {
+								$('.slip-pinjam').html('Rp. 0');
+							}
+						},
+						error: function (response) {
+							console.log(response.status + 'error');
+						}
+					});
 					console.log(response);
 				}
 			},

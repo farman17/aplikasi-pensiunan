@@ -70,6 +70,7 @@ $route['absen/lembur/(:any)'] = 'AbsenController/lembur/$1';
 $route['gaji'] = 'GajiController';
 $route['gaji/lihat/(:any)'] = 'GajiController/lihat/$1';
 $route['gaji/bayar/(:any)'] = 'GajiController/bayar/$1';
+$route['gaji/pinjam/(:any)'] = 'GajiController/pinjam/$1';
 
 $route['pinjam'] = 'PinjamController';
 $route['pinjam/tambah'] = 'PinjamController/tambah';

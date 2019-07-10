@@ -15,8 +15,11 @@ class JabatanController extends CI_Controller{
 	}
 
 	public function index(){
-		$data['jabatan'] = $this->JabatanModel->lihat_jabatan();
-		$this->load->view('templates/header');
+		$data = array(
+			'jabatan' => $this->JabatanModel->lihat_jabatan(),
+			'title' => 'Jabatan'
+		);
+		$this->load->view('templates/header',$data);
 		$this->load->view('backend/jabatan/index',$data);
 		$this->load->view('templates/footer');
 	}

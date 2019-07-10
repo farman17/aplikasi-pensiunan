@@ -21,9 +21,10 @@ class AbsenController extends CI_Controller
 	{
 		$data = array(
 			'absen' => $this->AbsenModel->lihat_absen(),
-			'karyawan' => json_encode($this->KaryawanModel->lihat_karyawan())
+			'karyawan' => json_encode($this->KaryawanModel->lihat_karyawan()),
+			'title' => 'Absen'
 		);
-		$this->load->view('templates/header');
+		$this->load->view('templates/header',$data);
 		$this->load->view('backend/absen/index', $data);
 		$this->load->view('templates/footer');
 	}

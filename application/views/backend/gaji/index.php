@@ -279,7 +279,7 @@
 								<tr>
 									<td>Pinjaman</td>
 									<td>:</td>
-									<td>Rp. 50.000</td>
+									<td>Rp. <span class="slip-pinjam"></span></td>
 								</tr>
 								<tr>
 									<td style="color: white;"> .</td>
@@ -289,7 +289,7 @@
 								<tr>
 									<td><b>Total</b></td>
 									<td><b>:</b></td>
-									<td><b>Rp. 50.000</b></td>
+									<td><b>Rp. <span class="slip-pinjam"></span></b></td>
 								</tr>
 							</table>
 						</div>

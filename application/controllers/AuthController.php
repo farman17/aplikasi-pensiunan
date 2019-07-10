@@ -9,8 +9,6 @@ class AuthController extends CI_Controller
 		parent::__construct();
 		$model = array('PenggunaModel');
 		$this->load->model($model);
-
-
 	}
 
 	public function index()
@@ -48,7 +46,10 @@ class AuthController extends CI_Controller
 				redirect(base_url('login'));
 			}
 		} else {
-			$this->load->view('backend/auth/login');
+			$data = array(
+				'title' => 'Login'
+			);
+			$this->load->view('backend/auth/login',$data);
 		}
 	}
 

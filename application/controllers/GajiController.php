@@ -18,15 +18,21 @@ class GajiController extends CI_Controller{
 
 	public function index(){
 		$data = array(
-			'gaji' => $this->GajiModel->lihat_gaji()
+			'gaji' => $this->GajiModel->lihat_gaji(),
+			'title' => 'Gaji'
 		);
-		$this->load->view('templates/header');
+		$this->load->view('templates/header',$data);
 		$this->load->view('backend/gaji/index',$data);
 		$this->load->view('templates/footer');
 	}
 
 	public function lihat($id){
 		$data = $this->GajiModel->lihat_satu_gaji_by_id($id);
+		echo json_encode($data);
+	}
+
+	public function pinjam($id){
+		$data = $this->GajiModel->lihat_satu_gaji_pinjam($id);
 		echo json_encode($data);
 	}
 

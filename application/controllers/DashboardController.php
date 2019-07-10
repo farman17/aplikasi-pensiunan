@@ -16,9 +16,10 @@ class DashboardController extends CI_Controller{
 
 	public function index(){
 		$data = array(
-			'jumlah_karyawan' => $this->DashboardModel->jumlah_karyawan()
+			'jumlah_karyawan' => $this->DashboardModel->jumlah_karyawan(),
+			'title' => 'Dashboard'
 		);
-		$this->load->view('templates/header');
+		$this->load->view('templates/header',$data);
 		$this->load->view('backend/index',$data);
 		$this->load->view('templates/footer');
 	}

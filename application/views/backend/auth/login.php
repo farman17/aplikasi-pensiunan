@@ -11,9 +11,9 @@
 	<meta name="keywords"
 		  content="admin template, Chameleon admin template, dashboard template, gradient admin template, responsive admin template, webapp, eCommerce dashboard, analytic dashboard">
 	<meta name="author" content="ThemeSelect">
-	<title>Login - Chameleon Admin - Modern Bootstrap 4 WebApp & Dashboard HTML Template + UI Kit</title>
+	<title><?=$title?> - Selkom Group</title>
 	<link rel="apple-touch-icon" href="<?= base_url() ?>assets/images/ico/apple-icon-120.png">
-	<link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/images/ico/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/images/logo/63-512.png">
 	<link
 		href="<?= base_url() ?>assets/css/fonts/css93c2.css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700"
 		rel="stylesheet">
@@ -66,7 +66,7 @@
 						<div class="card border-grey border-lighten-3 px-1 py-1 m-0">
 							<div class="card-header border-0">
 								<div class="text-center mb-1">
-									<img src="<?= base_url() ?>assets/images/logo/logo.png" alt="branding logo">
+									<img src="<?= base_url() ?>assets/images/logo/images.png" alt="branding logo">
 								</div>
 								<div class="font-large-1  text-center">
 									Login

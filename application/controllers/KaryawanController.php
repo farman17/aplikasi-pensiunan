@@ -17,9 +17,12 @@ class KaryawanController extends CI_Controller{
     }
 
     public function index(){
-    	$data['karyawan'] = $this->KaryawanModel->lihat_karyawan();
-    	$data['jabatan'] = $this->JabatanModel->lihat_jabatan();
-		$this->load->view('templates/header');
+    	$data = array(
+    		'karyawan' => $this->KaryawanModel->lihat_karyawan(),
+			'jabatan' => $this->JabatanModel->lihat_jabatan(),
+			'title' => 'Karyawan'
+		);
+		$this->load->view('templates/header',$data);
 		$this->load->view('backend/karyawan/index',$data);
 		$this->load->view('templates/footer');
 	}
