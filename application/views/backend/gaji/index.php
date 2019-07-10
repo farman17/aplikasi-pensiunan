@@ -297,12 +297,12 @@
 					<br>
 					<div class="row">
 						<div class="col-12">
-							<p class="tengah"><b>PENERIMAAN BERSIH = Rp. 20.000</b></p>
+							<p class="tengah"><b>PENERIMAAN BERSIH = Rp. <span id="slip-bersih"></span></b></p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-12">
-							<p class="tengah"><i>Terbilang : dua puluh ribu rupiah</i></p>
+							<p class="tengah"><i>Terbilang : <span id="slip-terbilang"></span></i></p>
 						</div>
 					</div>
 					<div class="row">
