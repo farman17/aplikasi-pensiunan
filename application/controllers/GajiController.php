@@ -6,7 +6,7 @@ class GajiController extends CI_Controller{
 	public function __construct()
 	{
 		parent::__construct();
-		$model = array('GajiModel');
+		$model = array('GajiModel','PinjamModel');
 		$helper = array('tgl_indo','nominal');
 		$this->load->model($model);
 		$this->load->helper($helper);
@@ -40,8 +40,25 @@ class GajiController extends CI_Controller{
 		$data = array(
 			'gaji_status' => 'sudah'
 		);
+
 		$save = $this->GajiModel->update_gaji($id,$data);
+
 		if ($save>0){
+			$gaji = $this->GajiModel->lihat_satu_gaji_pinjam($id);
+			if ($gaji != null){
+				if (($gaji['pinjam_jumlah'] - $gaji['pinjam_bayar']) > 500000){
+					$dataPinjam = array(
+						'pinjam_bayar' => 500000
+					);
+					$this->PinjamModel->update_pinjaman($gaji['pinjam_id'],$dataPinjam);
+				}else{
+					$bayar = $gaji['pinjam_jumlah'] - $gaji['pinjam_bayar'];
+					$dataPinjam = array(
+						'pinjam_bayar' => $bayar
+					);
+					$this->PinjamModel->update_pinjaman($gaji['pinjam_id'],$dataPinjam);
+				}
+			}
 			$this->session->set_flashdata('alert', 'update_gaji');
 			redirect('gaji');
 		}

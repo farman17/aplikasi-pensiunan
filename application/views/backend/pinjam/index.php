@@ -47,6 +47,7 @@
 						<th>Jumlah Pinjaman</th>
 						<th>Tanggal Pinjaman</th>
 						<th>Sudah Dibayar</th>
+						<th>Status</th>
 					</tr>
 					</thead>
 					<tbody>
@@ -65,6 +66,19 @@
 							?>
 						</td>
 						<td>Rp. <?=nominal($value['pinjam_bayar'])?></td>
+						<td>
+							<?php
+							if ($value['pinjam_jumlah'] > $value['pinjam_bayar']):
+							?>
+							<div class="badge badge-warning"><i class="ft-x-circle"></i> Belum Lunas</div>
+							<?php
+							else:
+							?>
+								<div class="badge badge-success"><i class="ft-x-circle"></i> Sudah Lunas</div>
+							<?php
+							endif;
+							?>
+						</td>
 					</tr>
 					<?php
 					$no++;

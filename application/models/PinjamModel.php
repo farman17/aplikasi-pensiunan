@@ -23,4 +23,10 @@ class PinjamModel extends CI_Model{
 		return $this->db->affected_rows();
 	}
 
+	public function update_pinjaman($id,$data){
+		$this->db->where('pinjam_id', $id);
+		$this->db->update('sigaka_pinjam', $data);
+		return $this->db->affected_rows();
+	}
+
 }
