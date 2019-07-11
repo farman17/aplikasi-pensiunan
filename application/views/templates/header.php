@@ -163,7 +163,7 @@
 					href="<?= base_url('pinjam') ?>"><i class="ft-calendar"></i><span class="menu-title"
 																					  data-i18n="">Pinjaman</span></a>
 			</li>
-			<li class=" nav-item"><a href="<?= base_url() ?>"><i class="ft-file"></i><span class="menu-title"
+			<li class=" nav-item"><a href="<?= base_url('laporan') ?>"><i class="ft-file"></i><span class="menu-title"
 																						   data-i18n="">Laporan</span></a>
 			</li>
 		</ul>
