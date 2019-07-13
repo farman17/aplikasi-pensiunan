@@ -76,6 +76,7 @@ $route['pinjam'] = 'PinjamController';
 $route['pinjam/tambah'] = 'PinjamController/tambah';
 
 $route['laporan'] = 'LaporanController';
+$route['laporan/lihat/(:any)/(:any)'] = 'LaporanController/lihat/$1/$2';
 
 $route['login'] = 'AuthController/login';
 $route['logout'] = 'AuthController/logout';

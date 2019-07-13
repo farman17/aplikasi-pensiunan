@@ -6,7 +6,7 @@ class LaporanController extends CI_Controller{
 	public function __construct()
 	{
 		parent::__construct();
-		$model = array('KaryawanModel');
+		$model = array('LaporanModel');
 		$helper = array('tgl_indo_helper');
 		$this->load->model($model);
 		$this->load->helper($helper);
@@ -23,5 +23,10 @@ class LaporanController extends CI_Controller{
 		$this->load->view('templates/header',$data);
 		$this->load->view('backend/laporan/index',$data);
 		$this->load->view('templates/footer');
+	}
+
+	public function lihat($tahun,$bulan){
+		$tanggal = $tahun.'-'.$bulan;
+		echo json_encode($this->LaporanModel->lihat_laporan($tanggal));
 	}
 }
