@@ -57,7 +57,7 @@
 						<td>Hari</td>
 						<td>Tanggal</td>
 						<td>Status</td>
-						<td style="text-align: center"><i class="ft-settings"></i></td>
+						<td style="text-align: center"><i class="ft-settings spinner"></i></td>
 					</tr>
 					</thead>
 					<tbody>
