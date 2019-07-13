@@ -5,7 +5,7 @@
 
 
 <!-- BEGIN: Customizer-->
-<div class="customizer border-left-blue-grey border-left-lighten-4 d-none d-xl-block d-print-none"><a class="customizer-close" href="#"><i class="ft-x font-medium-3"></i></a><a class="customizer-toggle bg-primary box-shadow-3" href="#" id="customizer-toggle-setting" style="margin-top: 40%"><i class="ft-settings font-medium-3 spinner white"></i></a><div class="customizer-content p-2">
+<div class="customizer border-left-blue-grey border-left-lighten-4 d-none d-xl-block d-print-none"><a class="customizer-close" href="#"><i class="ft-x font-medium-3"></i></a><a class="customizer-toggle bg-primary box-shadow-3" href="#" id="customizer-toggle-setting" style="margin-top: 80%"><i class="ft-settings font-medium-3 spinner white"></i></a><div class="customizer-content p-2">
         <h5 class="mt-1 mb-1 text-bold-500">Navbar Color Options</h5>
         <div class="navbar-color-options clearfix">
             <div class="gradient-colors mb-1 clearfix">

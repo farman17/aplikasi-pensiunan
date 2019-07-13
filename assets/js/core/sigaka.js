@@ -231,21 +231,28 @@ $(document).ready(function () {
 						dataType : 'json',
 						success : function (response2) {
 							if (response2 != null){
-								if (parseInt(response2.pinjam_jumlah) > 500000){
+								if ((parseInt(response2.pinjam_jumlah) - parseInt(response2.pinjam_bayar)) > 500000){
 									$('.slip-pinjam').html(formatRupiah('500000'));
 									bersih = total - 500000;
+									sisa = (parseInt(response2.pinjam_jumlah) - parseInt(response2.pinjam_bayar)) - 500000;
 									$('#slip-bersih').html(formatRupiah(bersih.toString()));
+									$('#slip-sisa-pinjam').html(formatRupiah(sisa.toString()));
 									$('#slip-terbilang').html(terbilang(bersih.toString()) + 'Rupiah');
 								} else {
-									$('.slip-pinjam').html(formatRupiah(response2.pinjam_jumlah.toString()));
-									bersih = total - parseInt(response2.pinjam_jumlah);
+									pinjam = parseInt(response2.pinjam_jumlah) - parseInt(response2.pinjam_bayar);
+									$('.slip-pinjam').html(formatRupiah(pinjam.toString()));
+									bersih = total - pinjam;
+									sisa = (parseInt(response2.pinjam_jumlah) - parseInt(response2.pinjam_bayar)) - pinjam;
 									$('#slip-bersih').html(formatRupiah(bersih.toString()));
+									$('#slip-sisa-pinjam').html(formatRupiah(sisa.toString()));
 									$('#slip-terbilang').html(terbilang(bersih.toString()) + 'Rupiah');
 								}
 							}
 							else {
 								$('.slip-pinjam').html('Rp. 0');
+								sisa = 0;
 								$('#slip-bersih').html(formatRupiah(total.toString()));
+								$('#slip-sisa-pinjam').html(formatRupiah(sisa.toString()));
 								$('#slip-terbilang').html(terbilang(total.toString()) + 'Rupiah');
 							}
 						},

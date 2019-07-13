@@ -72,9 +72,9 @@
 							?>
 							<div class="badge badge-warning"><i class="ft-x-circle"></i> Belum Lunas</div>
 							<?php
-							else:
+							elseif ($value['pinjam_jumlah'] == $value['pinjam_bayar']):
 							?>
-								<div class="badge badge-success"><i class="ft-x-circle"></i> Sudah Lunas</div>
+								<div class="badge badge-success"><i class="ft-check-circle"></i> Sudah Lunas</div>
 							<?php
 							endif;
 							?>

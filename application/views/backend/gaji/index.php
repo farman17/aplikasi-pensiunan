@@ -44,7 +44,7 @@
 						<td>Gaji Bulan Ini</td>
 						<td>Bulan ke</td>
 						<td>Status Bayar</td>
-						<td style="text-align: center"><i class="ft-settings"></i></td>
+						<td style="text-align: center"><i class="ft-settings spinner"></i></td>
 					</tr>
 					</thead>
 					<tbody>
@@ -76,13 +76,13 @@
 									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-lihat"
 									data-toggle="modal" data-target="#lihat" value="<?= $value['gaji_id'] ?>"
 									title="Lihat selengkapnya"><i class="ft-eye"></i></button>
+								<?php
+								if ($value['gaji_status'] == 'belum'):
+								?>
 								<button
 									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-slip"
 									data-toggle="modal" data-target="#slip" value="<?= $value['gaji_id'] ?>"
 									title="Lihat slip gaji"><i class="ft-printer"></i></button>
-								<?php
-								if ($value['gaji_status'] == 'belum'):
-								?>
 								<button
 									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
 									data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
@@ -90,6 +90,10 @@
 								<?php
 								else:
 								?>
+								<button
+									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-slip"
+									data-toggle="modal" data-target="#slip" value="<?= $value['gaji_id'] ?>"
+									title="Sudah bayar" disabled><i class="ft-printer"></i></button>
 								<button
 									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
 									data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
@@ -303,6 +307,11 @@
 					<div class="row">
 						<div class="col-12">
 							<p class="tengah"><i>Terbilang : <span id="slip-terbilang"></span></i></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<p class="tengah"><i>Sisa Pinjaman : Rp. <span id="slip-sisa-pinjam"></span></i></p>
 						</div>
 					</div>
 					<div class="row">

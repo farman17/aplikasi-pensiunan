@@ -48,13 +48,13 @@ class GajiController extends CI_Controller{
 			if ($gaji != null){
 				if (($gaji['pinjam_jumlah'] - $gaji['pinjam_bayar']) > 500000){
 					$dataPinjam = array(
-						'pinjam_bayar' => 500000
+						'pinjam_bayar' => $gaji['pinjam_bayar'] + 500000
 					);
 					$this->PinjamModel->update_pinjaman($gaji['pinjam_id'],$dataPinjam);
 				}else{
 					$bayar = $gaji['pinjam_jumlah'] - $gaji['pinjam_bayar'];
 					$dataPinjam = array(
-						'pinjam_bayar' => $bayar
+						'pinjam_bayar' => $gaji['pinjam_bayar'] + $bayar
 					);
 					$this->PinjamModel->update_pinjaman($gaji['pinjam_id'],$dataPinjam);
 				}
