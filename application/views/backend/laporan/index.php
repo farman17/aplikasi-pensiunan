@@ -1,3 +1,31 @@
+<style type="text/css">
+	.kotak {
+		padding: 5px;
+	}
+
+	@page {
+		size: A4;
+		margin: 0;
+	}
+
+	@media print {
+		body * {
+			visibility: hidden;
+		}
+
+		.kotak, .kotak * {
+			visibility: visible;
+		}
+
+		.kotak {
+			z-index: 2;
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+</style>
 <div class="row">
 	<div class="col-md-12">
 		<div class="card box-shadow-2">
@@ -37,7 +65,7 @@
 					</fieldset>
 				</div>
 				<hr>
-				<div id="laporan">
+				<div id="laporan" class="kotak">
 
 				</div>
 			</div>

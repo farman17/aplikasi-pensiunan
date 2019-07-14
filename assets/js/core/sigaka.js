@@ -330,6 +330,11 @@ $(document).ready(function () {
 						'</tr>' +
 						'</tfoot>' +
 						'</table>';
+					html += '' +
+						'<div class="d-print-none">' +
+						'<button onclick="window.print()" class="btn btn-primary btn-bg-gradient-x-purple-blue"><i class="fa fa-print"></i> Cetak' +
+						'</button>' +
+						'</div>'
 					$('#laporan').html(html);
 				}
 			},
