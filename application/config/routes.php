@@ -50,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+$route['dashboard'] = 'DashboardController';
+
 $route['karyawan'] = 'KaryawanController';
 $route['karyawan/tambah'] = 'KaryawanController/tambah';
 $route['karyawan/lihat/(:any)'] = 'KaryawanController/lihat/$1';
@@ -81,6 +83,6 @@ $route['laporan/lihat/(:any)/(:any)'] = 'LaporanController/lihat/$1/$2';
 $route['login'] = 'AuthController/login';
 $route['logout'] = 'AuthController/logout';
 
-$route['default_controller'] = 'DashboardController';
+$route['default_controller'] = 'Welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

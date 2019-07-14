@@ -20,7 +20,7 @@ class AuthController extends CI_Controller
 	{
 		if ($this->session->has_userdata('session_id')) {
 			$this->session->set_flashdata('alert', 'sudah_login');
-			redirect(base_url());
+			redirect(base_url('dashboard'));
 		}
 		if (isset($_POST['login'])) {
 			$username = $this->input->post('username');
@@ -40,7 +40,7 @@ class AuthController extends CI_Controller
 				);
 				$this->session->set_flashdata('alert', 'login_sukses');
 				$this->session->set_userdata($session);
-				redirect(base_url());
+				redirect(base_url('dashboard'));
 			} else {
 				$this->session->set_flashdata('alert', 'login_gagal');
 				redirect(base_url('login'));
