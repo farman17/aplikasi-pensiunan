@@ -152,7 +152,7 @@
 
 	<div class="row section-header" data-aos="fade-up">
 		<div class="col-full">
-			<h3 class="subhead">What We Do</h3>
+			<h3 class="subhead">Gallery</h3>
 			<h1 class="display-1">We have everything you need to launch and grow a successful digital business.</h1>
 		</div>
 	</div> <!-- end section-header -->
@@ -164,21 +164,63 @@
 
 				<!-- Full-width images with number and caption text -->
 				<div class="mySlides fade" style="width: 100%">
-					<div class="numbertext">1 / 3</div>
-					<img src="<?= base_url()?>assets/frontend/images/sigaka/alyssa.jpeg" style="width: 100%; height: 700px; margin: 0 auto">
-					<div class="text">Caption Text</div>
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)" style="background-color: rgba(0, 0, 0, 0.7)">1 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/alyssa.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Alyssa Ponsel</b>, Jalan Suka Karya Kecamatan Tampan</div>
 				</div>
 
 				<div class="mySlides fade" style="width: 100%">
-					<div class="numbertext">2 / 3</div>
-					<img src="<?= base_url()?>assets/frontend/images/sigaka/aurel.jpeg" style="width: 100%; height: 700px; margin: 0 auto">
-					<div class="text">Caption Two</div>
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">2 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/aurel.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Aurel Ponsel</b>, Jalan Suka Karya, Kecamatan Tampan</div>
 				</div>
 
 				<div class="mySlides fade" style="width: 100%">
-					<div class="numbertext">3 / 3</div>
-					<img src="<?= base_url()?>assets/frontend/images/sigaka/dana.jpeg" style="width: 100%; height: 700px; margin: 0 auto">
-					<div class="text">Caption Three</div>
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">3 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/dana.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Dana Ponsel</b>, Jalan Paus, Kelurahan Tangkerang Tengah</div>
+				</div>
+
+				<div class="mySlides fade" style="width: 100%">
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">4 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/inara.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Inara Ponsel</b>, Jalan Suka Karya, Kecamatan Tampan</div>
+				</div>
+
+				<div class="mySlides fade" style="width: 100%">
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">5 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/namira.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Namira Ponsel</b>, Jalan Suka Karya, Kecamatan Tampan</div>
+				</div>
+
+				<div class="mySlides fade" style="width: 100%">
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">6 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/selkom.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Selkom Ponsel</b>, Jalan Terubuk, Kecamatan Marpoyan Damai</div>
+				</div>
+
+				<div class="mySlides fade" style="width: 100%">
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">7 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/sk.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>SK Ponsel</b>, Jalan Duyung, Kecamatan Marpoyan Damai</div>
+				</div>
+
+				<div class="mySlides fade" style="width: 100%">
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">8 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/syafian.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Syafian Ponsel</b>, Jalan Suka Karya Ujung, Tarai Bangun</div>
+				</div>
+
+				<div class="mySlides fade" style="width: 100%">
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">9 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/syafitra.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Syafitra Ponsel</b>, Jalan Suka Karya, Kecamatan Tampan</div>
+				</div>
+
+				<div class="mySlides fade" style="width: 100%">
+					<div class="numbertext" style="background-color: rgba(0, 0, 0, 0.7)">10 / 10</div>
+					<img src="<?= base_url()?>assets/frontend/images/sigaka/syahdan.jpeg" style="width: 100%; height: 650px; margin: 0 auto">
+					<div class="text" style="background-color: rgba(0, 0, 0, 0.7)"><b>Syahdan Ponsel</b>, Jalan Duyung, Kecamatan Marpoyan Damai</div>
 				</div>
 
 				<!-- Next and previous buttons -->
@@ -192,6 +234,13 @@
 				<span class="dot" onclick="currentSlide(1)"></span>
 				<span class="dot" onclick="currentSlide(2)"></span>
 				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+				<span class="dot" onclick="currentSlide(5)"></span>
+				<span class="dot" onclick="currentSlide(6)"></span>
+				<span class="dot" onclick="currentSlide(7)"></span>
+				<span class="dot" onclick="currentSlide(8)"></span>
+				<span class="dot" onclick="currentSlide(9)"></span>
+				<span class="dot" onclick="currentSlide(10)"></span>
 			</div>
 		</div>
 	</div> <!-- end about-desc -->
@@ -206,7 +255,7 @@
 
 	<div class="row section-header" data-aos="fade-up">
 		<div class="col-full">
-			<h3 class="subhead">Featured Works</h3>
+			<h3 class="subhead">Location</h3>
 			<h1 class="display-1">These are some of our recent design projects and we are so excited to show them to you.</h1>
 		</div>
 	</div> <!-- end section-header -->
@@ -308,18 +357,18 @@
 				<div class="item-folio">
 
 					<div class="item-folio__thumb">
-						<a href="<?=base_url()?>assets/frontend/images/portfolio/gallery/g-liberty.jpg" class="thumb-link" title="Liberty" data-size="1050x700">
-							<img src="<?=base_url()?>assets/frontend/<?=base_url()?>assets/frontend/<?= base_url()?>assets/frontend/images/portfolio/liberty.jpg"
-								 srcset="<?= base_url()?>assets/frontend/images/portfolio/liberty.jpg 1x, ima<?= base_url()?>assets/frontend/ges/portfolio/liberty@2x.jpg 2x" alt="">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/alyssa.jpeg" class="thumb-link" title="Alyssa" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/alyssa.jpeg"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/alyssa.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/alyssa.jpeg 2x" alt="">
 						</a>
 					</div>
 
 					<div class="item-folio__text">
 						<h3 class="item-folio__title">
-							Liberty
+							Alyssa
 						</h3>
 						<p class="item-folio__cat">
-							Web Development
+							Kecamatan Tampan
 						</p>
 					</div>
 
@@ -398,83 +447,12 @@
 		</div> <!-- end masonry -->
 	</div> <!-- end masonry-wrap -->
 
-	<div class="testimonials-wrap" data-aos="fade-up">
-
-		<div class="row">
-			<div class="col-full testimonials-header">
-				<h2 class="h1">What Clients Are Saying.</h2>
-			</div>
-		</div>
-
-		<div class="row testimonials">
-
-			<div class="col-full testimonials__slider">
-
-				<div class="testimonials__slide">
-					<img src="<?= base_url()?>assets/frontend/images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-					<p>Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum.
-						Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori.</p>
-					<div class="testimonials__author">
-						Tim Cook
-						<span>CEO, Apple</span>
-					</div>
-				</div> <!-- end testimonials__slide -->
-
-				<div class="testimonials__slide">
-					<img src="<?= base_url()?>assets/frontend/images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
-					<p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-						Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
-					<div class="testimonials__author">
-						Sundar Pichai
-						<span>CEO, Google</span>
-					</div>
-				</div> <!-- end testimonials__slide -->
-
-				<div class="testimonials__slide">
-					<img src="<?= base_url()?>assets/frontend/images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-					<p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-						Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
-					<div class="testimonials__author">
-						Satya Nadella
-						<span>CEO, Microsoft</span>
-					</div>
-				</div> <!-- end testimonials__slide -->
-
-			</div> <!-- end testimonials__slider -->
-
-		</div> <!-- end testimonials -->
-
-	</div> <!-- end testimonials-wrap -->
 
 </section> <!-- end s-works -->
 
 
 <!-- stats
 ================================================== -->
-<section id="stats" class="s-stats">
-
-	<div class="row stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
-
-		<div class="col-block stats__col ">
-			<div class="stats__count">129</div>
-			<h5>Awards Received</h5>
-		</div>
-		<div class="col-block stats__col">
-			<div class="stats__count">1507</div>
-			<h5>Cups of Coffee</h5>
-		</div>
-		<div class="col-block stats__col">
-			<div class="stats__count">108</div>
-			<h5>Projects Completed</h5>
-		</div>
-		<div class="col-block stats__col">
-			<div class="stats__count">103</div>
-			<h5>Happy Clients</h5>
-		</div>
-
-	</div> <!-- end stats -->
-
-</section> <!-- end s-stats -->
 
 
 <!-- contact
