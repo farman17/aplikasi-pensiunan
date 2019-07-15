@@ -54,13 +54,13 @@
 
 			<ul class="header-nav__list">
 				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-				<li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-				<li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
-				<li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
+				<li><a class="smoothscroll"  href="#gallery" title="about">Gallery</a></li>
+				<li><a class="smoothscroll"  href="#location" title="services">Location</a></li>
 				<li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+				<li><a href="<?=base_url('login')?>" title="login">Login</a></li>
 			</ul>
 
-			<p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+<!--			<p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>-->
 
 			<ul class="header-nav__social">
 				<li>
@@ -112,8 +112,8 @@
 	</div> <!-- end home-content -->
 
 	<ul class="home-sidelinks">
-		<li><a class="smoothscroll" href="#about">About<span>who we are</span></a></li>
-		<li><a class="smoothscroll" href="#services">Services<span>what we do</span></a></li>
+		<li><a class="smoothscroll" href="#gallery">Gallery<span>who are we</span></a></li>
+		<li><a class="smoothscroll" href="#location">Location<span>where are we</span></a></li>
 		<li><a  class="smoothscroll" href="#contact">Contact<span>get in touch</span></a></li>
 	</ul> <!-- end home-sidelinks -->
 
@@ -133,7 +133,7 @@
 			</a></li>
 	</ul> <!-- end home-social -->
 
-	<a href="#slider" class="home-scroll smoothscroll">
+	<a href="#gallery" class="home-scroll smoothscroll">
 		<span class="home-scroll__text">Scroll Down</span>
 		<span class="home-scroll__icon"></span>
 	</a> <!-- end home-scroll -->
@@ -148,12 +148,12 @@
 
 <!-- services
 ================================================== -->
-<section id='slider' class="s-services light-gray">
+<section id='gallery' class="s-services light-gray">
 
 	<div class="row section-header" data-aos="fade-up">
 		<div class="col-full">
 			<h3 class="subhead">Gallery</h3>
-			<h1 class="display-1">We have everything you need to launch and grow a successful digital business.</h1>
+<!--			<h1 class="display-1">We have everything you need to launch and grow a successful digital business.</h1>-->
 		</div>
 	</div> <!-- end section-header -->
 
@@ -251,107 +251,17 @@
 
 <!-- works
 ================================================== -->
-<section id='works' class="s-works">
+<section id='location' class="s-works">
 
 	<div class="row section-header" data-aos="fade-up">
 		<div class="col-full">
 			<h3 class="subhead">Location</h3>
-			<h1 class="display-1">These are some of our recent design projects and we are so excited to show them to you.</h1>
+<!--			<h1 class="display-1">These are some of our recent design projects and we are so excited to show them to you.</h1>-->
 		</div>
 	</div> <!-- end section-header -->
 
 	<div class="row masonry-wrap">
 		<div class="masonry">
-
-			<div class="masonry__brick" data-aos="fade-up">
-				<div class="item-folio">
-
-					<div class="item-folio__thumb">
-						<a href="<?=base_url()?>assets/frontend/images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Lamp" data-size="1050x700">
-							<img src="<?=base_url()?>assets/frontend/<?=base_url()?>assets/frontend/<?= base_url()?>assets/frontend/images/portfolio/lamp.jpg"
-								 srcset="<?= base_url()?>assets/frontend/images/portfolio/lamp.jpg 1x, images<?= base_url()?>assets/frontend//portfolio/lamp@2x.jpg 2x" alt="">
-						</a>
-					</div>
-
-					<div class="item-folio__text">
-						<h3 class="item-folio__title">
-							Lamp
-						</h3>
-						<p class="item-folio__cat">
-							Web Design
-						</p>
-					</div>
-
-					<a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-						Project Link
-					</a>
-
-					<div class="item-folio__caption">
-						<p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-					</div>
-
-				</div> <!-- end item-folio -->
-			</div> <!-- end masonry__brick -->
-
-			<div class="masonry__brick" data-aos="fade-up">
-				<div class="item-folio">
-
-					<div class="item-folio__thumb">
-						<a href="<?=base_url()?>assets/frontend/images/portfolio/gallery/g-salad.jpg" class="thumb-link" title="Salad" data-size="1050x700">
-							<img src="<?=base_url()?>assets/frontend/<?=base_url()?>assets/frontend/<?= base_url()?>assets/frontend/images/portfolio/salad.jpg"
-								 srcset="<?= base_url()?>assets/frontend/images/portfolio/salad.jpg 1x, image<?= base_url()?>assets/frontend/s/portfolio/salad@2x.jpg 2x" alt="">
-						</a>
-					</div>
-
-					<div class="item-folio__text">
-						<h3 class="item-folio__title">
-							Salad
-						</h3>
-						<p class="item-folio__cat">
-							Branding
-						</p>
-					</div>
-
-					<a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-						Project Link
-					</a>
-
-					<span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-				</div> <!-- end item-folio -->
-			</div> <!-- end masonry__brick -->
-
-			<div class="masonry__brick" data-aos="fade-up">
-				<div class="item-folio">
-
-					<div class="item-folio__thumb">
-						<a href="<?=base_url()?>assets/frontend/images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-							<img src="<?=base_url()?>assets/frontend/<?=base_url()?>assets/frontend/<?= base_url()?>assets/frontend/images/portfolio/woodcraft.jpg"
-								 srcset="<?= base_url()?>assets/frontend/images/portfolio/woodcraft.jpg 1x, i<?= base_url()?>assets/frontend/mages/portfolio/woodcraft@2x.jpg 2x" alt="">
-						</a>
-					</div>
-
-					<div class="item-folio__text">
-						<h3 class="item-folio__title">
-							Woodcraft
-						</h3>
-						<p class="item-folio__cat">
-							Branding
-						</p>
-					</div>
-
-					<a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-						Project Link
-					</a>
-
-					<span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-				</div> <!-- end item-folio -->
-			</div> <!-- end masonry__brick -->
 
 			<div class="masonry__brick" data-aos="fade-up">
 				<div class="item-folio">
@@ -365,19 +275,15 @@
 
 					<div class="item-folio__text">
 						<h3 class="item-folio__title">
-							Alyssa
+							Alyssa Ponsel
 						</h3>
 						<p class="item-folio__cat">
 							Kecamatan Tampan
 						</p>
 					</div>
 
-					<a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-						Project Link
-					</a>
-
 					<span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Jalan Suka Karya Kecamatan Tampan</p>
                         </span>
 
 				</div> <!-- end item-folio -->
@@ -388,27 +294,78 @@
 				<div class="item-folio">
 
 					<div class="item-folio__thumb">
-						<a href="<?=base_url()?>assets/frontend/images/portfolio/gallery/g-fuji.jpg" class="thumb-link" title="Fuji" data-size="1050x700">
-							<img src="<?=base_url()?>assets/frontend/<?=base_url()?>assets/frontend/<?= base_url()?>assets/frontend/images/portfolio/fuji.jpg"
-								 srcset="<?= base_url()?>assets/frontend/images/portfolio/fuji.jpg 1x, images<?= base_url()?>assets/frontend//portfolio/fuji@2x.jpg 2x" alt="">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/aurel.jpeg" class="thumb-link" title="Aurel" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/aurel.jpeg"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/aurel.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/aurel.jpeg 2x" alt="">
 						</a>
 					</div>
 
 					<div class="item-folio__text">
 						<h3 class="item-folio__title">
-							Fuji
+							Aurel Ponsel
 						</h3>
 						<p class="item-folio__cat">
-							Web Design
+							Kecamatan Tampan
 						</p>
 					</div>
 
-					<a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-						Project Link
-					</a>
+					<span class="item-folio__caption">
+                            <p>Jalan Suka Karya Kecamatan Tampan</p>
+                        </span>
+
+				</div> <!-- end item-folio -->
+			</div> <!-- end masonry__brick -->
+
+
+			<div class="masonry__brick" data-aos="fade-up">
+				<div class="item-folio">
+
+					<div class="item-folio__thumb">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/dana.jpeg" class="thumb-link" title="Dana" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/dana.jpeg"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/dana.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/dana.jpeg 2x" alt="">
+						</a>
+					</div>
+
+					<div class="item-folio__text">
+						<h3 class="item-folio__title">
+							Dana Ponsel
+						</h3>
+						<p class="item-folio__cat">
+							Kelurahan Tangkerang Tengah
+						</p>
+					</div>
 
 					<span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Jalan Paus, Kelurahan Tangkerang Tengah</p>
+                        </span>
+
+				</div> <!-- end item-folio -->
+			</div> <!-- end masonry__brick -->
+
+
+
+			<div class="masonry__brick" data-aos="fade-up">
+				<div class="item-folio">
+
+					<div class="item-folio__thumb">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/namira.jpeg" class="thumb-link" title="Namira" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/namira.jpeg"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/namira.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/namira.jpeg 2x" alt="">
+						</a>
+					</div>
+
+					<div class="item-folio__text">
+						<h3 class="item-folio__title">
+							Namira Ponsel
+						</h3>
+						<p class="item-folio__cat">
+							Kecamatan Tampan
+						</p>
+					</div>
+
+					<span class="item-folio__caption">
+                            <p>Jalan Suka Karya Kecamatan Tampan</p>
                         </span>
 
 				</div> <!-- end item-folio -->
@@ -418,31 +375,165 @@
 				<div class="item-folio">
 
 					<div class="item-folio__thumb">
-						<a href="<?=base_url()?>assets/frontend/images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-							<img src="<?=base_url()?>assets/frontend/<?=base_url()?>assets/frontend/<?= base_url()?>assets/frontend/images/portfolio/shutterbug.jpg"
-								 srcset="<?= base_url()?>assets/frontend/images/portfolio/shutterbug.jpg 1x, <?= base_url()?>assets/frontend/images/portfolio/shutterbug@2x.jpg 2x" alt="">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/sk.jpeg" class="thumb-link" title="SK" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/sk.jpeg" style="width: 100%"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/sk.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/sk.jpeg 2x" alt="">
 						</a>
 					</div>
 
 					<div class="item-folio__text">
 						<h3 class="item-folio__title">
-							Lady Shutterbug
+							SK Ponsel
 						</h3>
 						<p class="item-folio__cat">
-							Branding
+							Kecamatan Marpoyan Damai
 						</p>
 					</div>
 
-					<a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-						Project Link
-					</a>
-
 					<span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Jalan Duyung, Kecamatan Marpoyan Damai</p>
                         </span>
 
 				</div> <!-- end item-folio -->
 			</div> <!-- end masonry__brick -->
+
+
+			<div class="masonry__brick" data-aos="fade-up">
+				<div class="item-folio">
+
+					<div class="item-folio__thumb">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/syafian.jpeg" class="thumb-link" title="Syafian" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/syafian.jpeg"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/syafian.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/syafian.jpeg 2x" alt="">
+						</a>
+					</div>
+
+					<div class="item-folio__text">
+						<h3 class="item-folio__title">
+							Syafian Ponsel
+						</h3>
+						<p class="item-folio__cat">
+							Tarai Bangun
+						</p>
+					</div>
+
+					<span class="item-folio__caption">
+                            <p>Jalan Suka Karya Ujung, Tarai Bangun</p>
+                        </span>
+
+				</div> <!-- end item-folio -->
+			</div> <!-- end masonry__brick -->
+
+
+			<div class="masonry__brick" data-aos="fade-up">
+				<div class="item-folio">
+
+					<div class="item-folio__thumb">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/selkom.jpeg" class="thumb-link" title="Selkom" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/selkom.jpeg" style="width: 100%"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/selkom.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/selkom.jpeg 2x" alt="">
+						</a>
+					</div>
+
+					<div class="item-folio__text">
+						<h3 class="item-folio__title">
+							Selkom Ponsel
+						</h3>
+						<p class="item-folio__cat">
+							Kecamatan Marpoyan Damai
+						</p>
+					</div>
+
+					<span class="item-folio__caption">
+                            <p>Jalan Terubuk, Kecamatan Marpoyan Damai</p>
+                        </span>
+
+				</div> <!-- end item-folio -->
+			</div> <!-- end masonry__brick -->
+
+
+
+			<div class="masonry__brick" data-aos="fade-up">
+				<div class="item-folio">
+
+					<div class="item-folio__thumb">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/syafitra.jpeg" class="thumb-link" title="Syafitra" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/syafitra.jpeg"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/syafitra.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/syafitra.jpeg 2x" alt="">
+						</a>
+					</div>
+
+					<div class="item-folio__text">
+						<h3 class="item-folio__title">
+							Syafitra Ponsel
+						</h3>
+						<p class="item-folio__cat">
+							Kecamatan Tampan
+						</p>
+					</div>
+
+					<span class="item-folio__caption">
+                            <p>Jalan Suka Karya Kecamatan Tampan</p>
+                        </span>
+
+				</div> <!-- end item-folio -->
+			</div> <!-- end masonry__brick -->
+
+
+
+			<div class="masonry__brick" data-aos="fade-up">
+				<div class="item-folio">
+
+					<div class="item-folio__thumb">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/inara.jpeg" class="thumb-link" title="Inara" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/inara.jpeg"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/inara.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/inara.jpeg 2x" alt="">
+						</a>
+					</div>
+
+					<div class="item-folio__text">
+						<h3 class="item-folio__title">
+							Inara Ponsel
+						</h3>
+						<p class="item-folio__cat">
+							Kecamatan Tampan
+						</p>
+					</div>
+
+					<span class="item-folio__caption">
+                            <p>Jalan Suka Karya Kecamatan Tampan</p>
+                        </span>
+
+				</div> <!-- end item-folio -->
+			</div> <!-- end masonry__brick -->
+
+			<div class="masonry__brick" data-aos="fade-up">
+				<div class="item-folio">
+
+					<div class="item-folio__thumb">
+						<a href="<?=base_url()?>assets/frontend/images/sigaka/syahdan.jpeg" class="thumb-link" title="Syahdan" data-size="1050x700">
+							<img src="<?= base_url()?>assets/frontend/images/sigaka/syahdan.jpeg"
+								 srcset="<?= base_url()?>assets/frontend/images/sigaka/syahdan.jpeg 1x, <?= base_url()?>assets/frontend/images/sigaka/syahdan.jpeg 2x" alt="">
+						</a>
+					</div>
+
+					<div class="item-folio__text">
+						<h3 class="item-folio__title">
+							Syahdan Ponsel
+						</h3>
+						<p class="item-folio__cat">
+							Kecamatan Marpoyan Damai
+						</p>
+					</div>
+
+					<span class="item-folio__caption">
+                            <p>Jalan Duyung, Kecamatan Marpoyan Damai</p>
+                        </span>
+
+				</div> <!-- end item-folio -->
+			</div> <!-- end masonry__brick -->
+
+
 
 		</div> <!-- end masonry -->
 	</div> <!-- end masonry-wrap -->
@@ -462,7 +553,7 @@
 	<div class="row section-header" data-aos="fade-up">
 		<div class="col-full">
 			<h3 class="subhead subhead--light">Contact Us</h3>
-			<h1 class="display-1 display-1--light">Get in touch and let's make something great together. Let's turn your idea on an even greater product.</h1>
+<!--			<h1 class="display-1 display-1--light">Get in touch and let's make something great together. Let's turn your idea on an even greater product.</h1>-->
 		</div>
 	</div> <!-- end section-header -->
 
@@ -470,8 +561,8 @@
 
 		<div class="col-full contact-main" data-aos="fade-up">
 			<p>
-				<a href="mailto:#0" class="contact-email">hello@transcend-studio.com</a>
-				<span class="contact-number">+1 (917) 123 456  /  +1 (917) 333 987</span>
+				<a href="mailto:#0" class="contact-email">dila@gmail.com</a>
+				<span class="contact-number">+62 823-8827-4446</span>
 			</p>
 		</div> <!-- end contact-main -->
 
@@ -483,9 +574,8 @@
 			<h3 class="subhead subhead--light">Where To Find Us</h3>
 
 			<p class="contact-address">
-				1600 Amphitheatre Parkway<br>
-				Mountain View, CA<br>
-				94043 US
+				Jalan Terubuk<br>
+				Kecamatan Marpoyan Damai<br>
 			</p>
 		</div> <!-- end contact-secondary -->
 
