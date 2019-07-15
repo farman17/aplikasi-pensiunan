@@ -144,7 +144,7 @@
 						<li class="<?php if ($this->uri->segment(1) == 'karyawan') echo 'active' ?>"><a
 								class="menu-item"
 								href="<?= base_url('karyawan') ?>"><i
-									class="ft-users"></i> Data
+									class="ft-users"> </i> Data
 								Karyawan</a>
 						</li>
 						<li class="<?php if ($this->uri->segment(1) == 'jabatan') echo 'active' ?>"><a class="menu-item"

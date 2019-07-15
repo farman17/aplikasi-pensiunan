@@ -228,7 +228,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="tengah"><h3><b>Selkom Group</b></h3></div>
-							<div class="tengah">Jalan Duyung, Kelurahan, Kota Pekanbaru, Riau</div>
+							<div class="tengah">Jalan Suka Karya, Kecamatan Tampan, Kota Pekanbaru, Riau</div>
 							<hr>
 							<div class="tengah"><b><u>SLIP GAJI KARYAWAN</u></b></div>
 							<br>
@@ -322,7 +322,7 @@
 							<br>
 							<br>
 							<br>
-							<p><b><u>Mirwansyah, ST.</u></b></p>
+							<p><b><u>Abdul Mustaqim</u></b></p>
 						</div>
 					</div>
 				</div>
