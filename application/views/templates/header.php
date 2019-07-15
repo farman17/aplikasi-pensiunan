@@ -9,7 +9,7 @@
 	<meta name="description" content="Sistem Informasi Penggajian Selkom Group">
 	<meta name="keywords" content="Sistem Informasi Penggajian Selkom Group">
 	<meta name="author" content="Jihad">
-	<title><?=$title?> - Selkom Group</title>
+	<title><?= $title ?> - Selkom Group</title>
 	<link rel="apple-touch-icon" href="<?= base_url() ?>assets/images/ico/apple-icon-120.png">
 	<link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/images/logo/63-512.png">
 	<link
@@ -122,7 +122,7 @@
 	 data-img="<?= base_url() ?>assets/images/backgrounds/02.jpg">
 	<div class="navbar-header">
 		<ul class="nav navbar-nav flex-row">
-			<li class="nav-item mr-auto"><a class="navbar-brand" href="index-2.html">
+			<li class="nav-item mr-auto"><a class="navbar-brand" href="<?= base_url('dashboard') ?>">
 					<img class="brand-logo"
 						 alt="Chameleon admin logo"
 						 src="<?= base_url() ?>assets/images/logo/63-512.png"/>
@@ -133,39 +133,48 @@
 	<div class="navigation-background"></div>
 	<div class="main-menu-content">
 		<ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-			<li class=" nav-item <?php if ($this->uri->segment(1) == null) echo 'active' ?>"><a
-					href="<?= base_url() ?>"><i class="ft-home"></i><span class="menu-title"
-																		  data-i18n="">Dashboard</span></a>
+			<li class=" nav-item <?php if ($this->uri->segment(1) == 'dashboard') echo 'active' ?>"><a
+					href="<?= base_url('dashboard') ?>"><i class="ft-home"></i><span class="menu-title"
+																					 data-i18n="">Dashboard</span></a>
 			</li>
-			<li class=" nav-item"><a href="#"><i class="ft-layers"></i><span class="menu-title"
-																			 data-i18n="">Data Master</span></a>
-				<ul class="menu-content">
-					<li class="<?php if ($this->uri->segment(1) == 'karyawan') echo 'active' ?>"><a class="menu-item"
-																									href="<?= base_url('karyawan') ?>"><i
-								class="ft-users"></i> Data
-							Karyawan</a>
-					</li>
-					<li class="<?php if ($this->uri->segment(1) == 'jabatan') echo 'active' ?>"><a class="menu-item"
-																								   href="<?= base_url('jabatan') ?>"><i
-								class="ft-award"></i> Data Jabatan</a>
-					</li>
-				</ul>
-			</li>
-			<li class=" nav-item <?php if ($this->uri->segment(1) == 'absen') echo 'active' ?>"><a
-					href="<?= base_url('absen') ?>"><i class="ft-user-check"></i><span class="menu-title"
-																					   data-i18n="">Absen</span></a>
-			</li>
-			<li class=" nav-item <?php if ($this->uri->segment(1) == 'gaji') echo 'active' ?>"><a
-					href="<?= base_url('gaji') ?>"><i class="icon-wallet"></i><span class="menu-title"
-																					data-i18n="">Gaji</span></a>
-			</li>
-			<li class=" nav-item <?php if ($this->uri->segment(1) == 'pinjam') echo 'active' ?>"><a
-					href="<?= base_url('pinjam') ?>"><i class="ft-calendar"></i><span class="menu-title"
-																					  data-i18n="">Pinjaman</span></a>
-			</li>
-			<li class=" nav-item"><a href="<?= base_url('laporan') ?>"><i class="ft-file"></i><span class="menu-title"
-																						   data-i18n="">Laporan</span></a>
-			</li>
+			<?php if ($this->session->userdata('session_hak_akses') == 'manajer'): ?>
+				<li class=" nav-item"><a href="#"><i class="ft-layers"></i><span class="menu-title"
+																				 data-i18n="">Data Master</span></a>
+					<ul class="menu-content">
+						<li class="<?php if ($this->uri->segment(1) == 'karyawan') echo 'active' ?>"><a
+								class="menu-item"
+								href="<?= base_url('karyawan') ?>"><i
+									class="ft-users"></i> Data
+								Karyawan</a>
+						</li>
+						<li class="<?php if ($this->uri->segment(1) == 'jabatan') echo 'active' ?>"><a class="menu-item"
+																									   href="<?= base_url('jabatan') ?>"><i
+									class="ft-award"></i> Data Jabatan</a>
+						</li>
+					</ul>
+				</li>
+				<li class=" nav-item <?php if ($this->uri->segment(1) == 'absen') echo 'active' ?>"><a
+						href="<?= base_url('absen') ?>"><i class="ft-user-check"></i><span class="menu-title"
+																						   data-i18n="">Absen</span></a>
+				</li>
+				<li class=" nav-item <?php if ($this->uri->segment(1) == 'gaji') echo 'active' ?>"><a
+						href="<?= base_url('gaji') ?>"><i class="icon-wallet"></i><span class="menu-title"
+																						data-i18n="">Gaji</span></a>
+				</li>
+				<li class=" nav-item <?php if ($this->uri->segment(1) == 'pinjam') echo 'active' ?>"><a
+						href="<?= base_url('pinjam') ?>"><i class="ft-calendar"></i><span class="menu-title"
+																						  data-i18n="">Pinjaman</span></a>
+				</li>
+				<li class=" nav-item"><a href="<?= base_url('laporan') ?>"><i class="ft-file"></i><span
+							class="menu-title"
+							data-i18n="">Laporan</span></a>
+				</li>
+			<?php elseif ($this->session->userdata('session_hak_akses') == 'owner'): ?>
+				<li class=" nav-item"><a href="<?= base_url('laporan') ?>"><i class="ft-file"></i><span
+							class="menu-title"
+							data-i18n="">Laporan</span></a>
+				</li>
+			<?php endif; ?>
 		</ul>
 	</div>
 </div>
