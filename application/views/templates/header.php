@@ -137,44 +137,37 @@
 					href="<?= base_url('dashboard') ?>"><i class="ft-home"></i><span class="menu-title"
 																					 data-i18n="">Dashboard</span></a>
 			</li>
-			<?php if ($this->session->userdata('session_hak_akses') == 'manajer'): ?>
-				<li class=" nav-item"><a href="#"><i class="ft-layers"></i><span class="menu-title"
-																				 data-i18n="">Data Master</span></a>
-					<ul class="menu-content">
-						<li class="<?php if ($this->uri->segment(1) == 'karyawan') echo 'active' ?>"><a
-								class="menu-item"
-								href="<?= base_url('karyawan') ?>"><i
-									class="ft-users"> </i> Data
-								Karyawan</a>
-						</li>
-						<li class="<?php if ($this->uri->segment(1) == 'jabatan') echo 'active' ?>"><a class="menu-item"
-																									   href="<?= base_url('jabatan') ?>"><i
-									class="ft-award"></i> Data Jabatan</a>
-						</li>
-					</ul>
-				</li>
-				<li class=" nav-item <?php if ($this->uri->segment(1) == 'absen') echo 'active' ?>"><a
-						href="<?= base_url('absen') ?>"><i class="ft-user-check"></i><span class="menu-title"
-																						   data-i18n="">Absen</span></a>
-				</li>
-				<li class=" nav-item <?php if ($this->uri->segment(1) == 'gaji') echo 'active' ?>"><a
-						href="<?= base_url('gaji') ?>"><i class="icon-wallet"></i><span class="menu-title"
-																						data-i18n="">Gaji</span></a>
-				</li>
-				<li class=" nav-item <?php if ($this->uri->segment(1) == 'pinjam') echo 'active' ?>"><a
-						href="<?= base_url('pinjam') ?>"><i class="ft-calendar"></i><span class="menu-title"
-																						  data-i18n="">Pinjaman</span></a>
-				</li>
-				<li class=" nav-item"><a href="<?= base_url('laporan') ?>"><i class="ft-file"></i><span
-							class="menu-title"
-							data-i18n="">Laporan</span></a>
-				</li>
-			<?php elseif ($this->session->userdata('session_hak_akses') == 'owner'): ?>
-				<li class=" nav-item"><a href="<?= base_url('laporan') ?>"><i class="ft-file"></i><span
-							class="menu-title"
-							data-i18n="">Laporan</span></a>
-				</li>
-			<?php endif; ?>
+			<li class=" nav-item"><a href="#"><i class="ft-layers"></i><span class="menu-title"
+																			 data-i18n="">Data Master</span></a>
+				<ul class="menu-content">
+					<li class="<?php if ($this->uri->segment(1) == 'karyawan') echo 'active' ?>"><a
+							class="menu-item"
+							href="<?= base_url('karyawan') ?>"><i
+								class="ft-users"> </i> Data
+							Karyawan</a>
+					</li>
+					<li class="<?php if ($this->uri->segment(1) == 'jabatan') echo 'active' ?>"><a class="menu-item"
+																								   href="<?= base_url('jabatan') ?>"><i
+								class="ft-award"></i> Data Jabatan</a>
+					</li>
+				</ul>
+			</li>
+			<li class=" nav-item <?php if ($this->uri->segment(1) == 'absen') echo 'active' ?>"><a
+					href="<?= base_url('absen') ?>"><i class="ft-user-check"></i><span class="menu-title"
+																					   data-i18n="">Absen</span></a>
+			</li>
+			<li class=" nav-item <?php if ($this->uri->segment(1) == 'gaji') echo 'active' ?>"><a
+					href="<?= base_url('gaji') ?>"><i class="icon-wallet"></i><span class="menu-title"
+																					data-i18n="">Gaji</span></a>
+			</li>
+			<li class=" nav-item <?php if ($this->uri->segment(1) == 'pinjam') echo 'active' ?>"><a
+					href="<?= base_url('pinjam') ?>"><i class="ft-calendar"></i><span class="menu-title"
+																					  data-i18n="">Pinjaman</span></a>
+			</li>
+			<li class=" nav-item"><a href="<?= base_url('laporan') ?>"><i class="ft-file"></i><span
+						class="menu-title"
+						data-i18n="">Laporan</span></a>
+			</li>
 		</ul>
 	</div>
 </div>

@@ -33,10 +33,12 @@
 			?>
 			<div class="card-header">
 				<h1 style="text-align: center">Data Karyawan</h1>
+				<?php if ($this->session->userdata('session_hak_akses') == 'manajer'):?>
 				<button type="button" class="btn btn-primary btn-bg-gradient-x-purple-blue box-shadow-2"
 						data-toggle="modal" data-target="#bootstrap">
 					<i class="ft-plus-circle"></i> Tambah data karyawan
 				</button>
+				<?php endif; ?>
 			</div>
 			<hr>
 			<div class="card-body">
@@ -67,6 +69,7 @@
 									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 karyawan-lihat"
 									data-toggle="modal" data-target="#lihat" value="<?= $value['karyawan_id'] ?>"
 									title="Lihat selengkapnya"><i class="ft-eye"></i></button>
+								<?php if ($this->session->userdata('session_hak_akses') == 'manajer'):?>
 								<button
 									class="btn btn-success btn-sm  btn-bg-gradient-x-blue-green box-shadow-2 karyawan-edit"
 									data-toggle="modal" data-target="#ubah" value="<?= $value['karyawan_id'] ?>"
@@ -75,6 +78,7 @@
 									class="btn btn-danger btn-sm  btn-bg-gradient-x-red-pink box-shadow-2 karyawan-hapus"
 									data-toggle="modal" data-target="#hapus" value="<?= $value['karyawan_id'] ?>"
 									title="Hapus data karyawan"><i class="ft-trash"></i></button>
+								<?php endif;?>
 							</td>
 						</tr>
 						<?php

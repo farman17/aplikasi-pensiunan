@@ -76,28 +76,32 @@
 									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-lihat"
 									data-toggle="modal" data-target="#lihat" value="<?= $value['gaji_id'] ?>"
 									title="Lihat selengkapnya"><i class="ft-eye"></i></button>
-								<?php
-								if ($value['gaji_status'] == 'belum'):
-								?>
-								<button
-									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-slip"
-									data-toggle="modal" data-target="#slip" value="<?= $value['gaji_id'] ?>"
-									title="Lihat slip gaji"><i class="ft-printer"></i></button>
-								<button
-									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
-									data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
-									title="Sudah bayar ?"><i class="ft-check-square"></i></button>
-								<?php
-								else:
-								?>
-								<button
-									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-slip"
-									data-toggle="modal" data-target="#slip" value="<?= $value['gaji_id'] ?>"
-									title="Sudah bayar" disabled><i class="ft-printer"></i></button>
-								<button
-									class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
-									data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
-									title="Sudah bayar" disabled><i class="ft-check-square"></i></button>
+								<?php if ($this->session->userdata('session_hak_akses') == 'manajer'): ?>
+									<?php
+									if ($value['gaji_status'] == 'belum'):
+										?>
+										<button
+											class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-slip"
+											data-toggle="modal" data-target="#slip" value="<?= $value['gaji_id'] ?>"
+											title="Lihat slip gaji"><i class="ft-printer"></i></button>
+										<button
+											class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
+											data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
+											title="Sudah bayar ?"><i class="ft-check-square"></i></button>
+									<?php
+									else:
+										?>
+										<button
+											class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-slip"
+											data-toggle="modal" data-target="#slip" value="<?= $value['gaji_id'] ?>"
+											title="Sudah bayar" disabled><i class="ft-printer"></i></button>
+										<button
+											class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
+											data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
+											title="Sudah bayar" disabled><i class="ft-check-square"></i></button>
+									<?php
+									endif;
+									?>
 								<?php
 								endif;
 								?>
@@ -340,7 +344,8 @@
 
 
 <!-- Modal hapus -->
-<div class="modal fade text-left" id="bayar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+<div class="modal fade text-left" id="bayar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35"
+	 aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -350,7 +355,8 @@
 				</button>
 			</div>
 			<div class="modal-footer">
-				<input type="reset" class="btn btn-secondary btn-bg-gradient-x-red-pink" data-dismiss="modal" value="Tutup">
+				<input type="reset" class="btn btn-secondary btn-bg-gradient-x-red-pink" data-dismiss="modal"
+					   value="Tutup">
 				<div id="tombol-konfirmasi">
 
 				</div>

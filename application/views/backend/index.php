@@ -39,11 +39,9 @@
 								<div class="heading-elements">
 									<ul class="list-inline mb-0">
 										<li>
-											<?php if ($this->session->userdata('session_hak_akses') == 'manajer'):?>
 											<a class="btn btn-sm btn-white danger box-shadow-1 round pull-right"
 											   href="<?= base_url('karyawan') ?>">Lihat<i
 													class="ft-arrow-right pl-1"></i></a>
-											<?php endif;?>
 										</li>
 									</ul>
 								</div>
@@ -75,11 +73,9 @@
 								<div class="heading-elements">
 									<ul class="list-inline mb-0">
 										<li>
-											<?php if ($this->session->userdata('session_hak_akses') == 'manajer'):?>
 											<a class="btn btn-sm btn-white danger box-shadow-1 round pull-right"
 											   href="<?= base_url('absen') ?>">Lihat<i
 													class="ft-arrow-right pl-1"></i></a>
-											<?php endif;?>
 										</li>
 									</ul>
 								</div>
@@ -113,11 +109,9 @@
 								<div class="heading-elements">
 									<ul class="list-inline mb-0">
 										<li>
-											<?php if ($this->session->userdata('session_hak_akses') == 'manajer'):?>
 											<a class="btn btn-sm btn-white danger box-shadow-1 round pull-right"
 											   href="<?= base_url('pinjam') ?>">Lihat<i
 													class="ft-arrow-right pl-1"></i></a>
-											<?php endif;?>
 										</li>
 									</ul>
 								</div>
