@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Jul 2019 pada 09.55
+-- Waktu pembuatan: 03 Agu 2019 pada 17.31
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -41,8 +41,9 @@ CREATE TABLE `sigaka_absen` (
 --
 
 INSERT INTO `sigaka_absen` (`absen_id`, `absen_karyawan_id`, `absen_hari`, `absen_status`, `absen_date_created`) VALUES
+('ABS-45434', 'PEG-76226', 'Sabtu', 'normal', '2019-08-03 22:17:14'),
 ('ABS-74757', 'PEG-74722', 'Senin', 'lembur', '2019-07-15 14:12:37'),
-('ABS-76293', 'PEG-76226', 'Senin', 'normal', '2019-07-15 14:38:13');
+('ABS-76293', 'PEG-76226', 'Senin', 'lembur', '2019-07-15 14:38:13');
 
 -- --------------------------------------------------------
 
@@ -55,6 +56,7 @@ CREATE TABLE `sigaka_gaji` (
   `gaji_karyawan_id` varchar(20) NOT NULL,
   `gaji_lembur` int(20) DEFAULT '0',
   `gaji_total` int(20) NOT NULL,
+  `gaji_bayar_pinjaman` int(20) NOT NULL,
   `gaji_tanggal` date DEFAULT NULL,
   `gaji_bulan_ke` int(11) DEFAULT NULL,
   `gaji_status` enum('sudah','belum') NOT NULL DEFAULT 'belum',
@@ -65,9 +67,9 @@ CREATE TABLE `sigaka_gaji` (
 -- Dumping data untuk tabel `sigaka_gaji`
 --
 
-INSERT INTO `sigaka_gaji` (`gaji_id`, `gaji_karyawan_id`, `gaji_lembur`, `gaji_total`, `gaji_tanggal`, `gaji_bulan_ke`, `gaji_status`, `gaji_date_created`) VALUES
-('GJI-74757', 'PEG-74722', 35000, 35000, '2019-07-15', 1, 'sudah', '2019-07-15 14:12:37'),
-('GJI-76293', 'PEG-76226', 0, 35000, '2019-07-15', 1, 'belum', '2019-07-15 14:38:13');
+INSERT INTO `sigaka_gaji` (`gaji_id`, `gaji_karyawan_id`, `gaji_lembur`, `gaji_total`, `gaji_bayar_pinjaman`, `gaji_tanggal`, `gaji_bulan_ke`, `gaji_status`, `gaji_date_created`) VALUES
+('GJI-74757', 'PEG-74722', 35000, 35000, 0, '2019-07-15', 1, 'sudah', '2019-07-15 14:12:37'),
+('GJI-76293', 'PEG-76226', 35000, 70000, 30000, '2019-08-03', 1, 'sudah', '2019-07-15 14:38:13');
 
 -- --------------------------------------------------------
 
@@ -115,7 +117,7 @@ CREATE TABLE `sigaka_karyawan` (
 
 INSERT INTO `sigaka_karyawan` (`karyawan_id`, `karyawan_jabatan_id`, `karyawan_nama`, `karyawan_tempat_lahir`, `karyawan_tanggal_lahir`, `karyawan_alamat`, `karyawan_tanggal_gabung`, `karyawan_nomor_hp`, `karyawan_no_rekening`, `karyawan_date_created`) VALUES
 ('PEG-74722', 'JAB-74569', 'Cucu', 'Pekanbaru', '1997-09-04', 'Disana', '2014-06-14', '081234567890', '', '2019-07-15 14:12:02'),
-('PEG-76226', 'JAB-76143', 'widi', 'pku', '2000-07-09', 'pku', '2019-07-24', '081233444433', '', '2019-07-15 14:37:06');
+('PEG-76226', 'JAB-76143', 'widi', 'pku', '2000-07-09', 'pku', '2019-08-03', '081233444433', '', '2019-07-15 14:37:06');
 
 -- --------------------------------------------------------
 
@@ -160,6 +162,7 @@ CREATE TABLE `sigaka_pinjam` (
 --
 
 INSERT INTO `sigaka_pinjam` (`pinjam_id`, `pinjam_karyawan_id`, `pinjam_jumlah`, `pinjam_bayar`, `pinjam_date_created`) VALUES
+('PJM-44503', 'PEG-76226', 30000, 30000, '2019-08-03 22:01:43'),
 ('PJM-74863', 'PEG-74722', 50000, 50000, '2019-07-15 14:14:23');
 
 --

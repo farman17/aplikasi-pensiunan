@@ -195,6 +195,9 @@ $(document).ready(function () {
 					$('#gaji_lihat_gaji').val(formatRupiah(response.gaji_total,'Rp. '));
 					total = parseInt(response.gaji_lembur) + parseInt(response.gaji_total);
 					$('#gaji_lihat_total').val(formatRupiah(total.toString(),'Rp. '));
+					$('#gaji_lihat_bayar_pinjaman').val(formatRupiah(response.gaji_bayar_pinjaman,'Rp. '));
+					bersih = total - parseInt(response.gaji_bayar_pinjaman);
+					$('#gaji_lihat_bersih').val(formatRupiah(bersih.toString(),'Rp. '));
 					$('#gaji_lihat_bulan').val(response.gaji_bulan_ke);
 					console.log(response);
 				}
@@ -303,7 +306,9 @@ $(document).ready(function () {
 						'<th>Nama Karyawan</th>' +
 						'<th>Jabatan</th>' +
 						'<th>Tanggal</th>' +
-						'<th>Jumlah</th>' +
+						'<th>Total Gaji</th>' +
+						'<th>Pinjaman</th>' +
+						'<th>Gaji Bersih</th>' +
 						'</tr>' +
 						'</thead>' +
 						'<tbody>';
@@ -317,15 +322,17 @@ $(document).ready(function () {
 							'<td>'+response[i].jabatan_nama+'</td>' +
 							'<td>'+date_indo(response[i].gaji_tanggal)+'</td>' +
 							'<td style="text-align: right"> Rp. '+formatRupiah((parseInt(response[i].gaji_lembur) + parseInt(response[i].gaji_total)).toString())+'</td>' +
+							'<td style="text-align: right"> Rp. '+formatRupiah((parseInt(response[i].gaji_bayar_pinjaman)).toString())+'</td>' +
+							'<td style="text-align: right"> Rp. '+formatRupiah(((parseInt(response[i].gaji_lembur) + parseInt(response[i].gaji_total)) - parseInt(response[i].gaji_bayar_pinjaman)).toString())+'</td>' +
 							'</tr>';
-						total = total + (parseInt(response[i].gaji_lembur) + parseInt(response[i].gaji_total));
+						total = total + (parseInt(response[i].gaji_lembur) + parseInt(response[i].gaji_total))- parseInt(response[i].gaji_bayar_pinjaman);
 						no++;
 					}
 					html += '' +
 						'</tbody>' +
 						'<tfoot>' +
 						'<tr>' +
-						'<td colspan="4" style="text-align: center"><b>Total</b></td>' +
+						'<td colspan="6" style="text-align: center"><b>Total</b></td>' +
 						'<td style="text-align: right"> <b>Rp.'+formatRupiah(total.toString())+'</b></td>' +
 						'</tr>' +
 						'</tfoot>' +

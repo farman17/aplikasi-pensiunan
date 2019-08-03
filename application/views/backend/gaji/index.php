@@ -171,6 +171,18 @@
 						   autocomplete="off" readonly>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
+					<label for="gaji_lihat_total">Pinjaman Bulan Ini</label>
+					<input type="text" class="form-control" id="gaji_lihat_bayar_pinjaman" name="nomor_rekening"
+						   placeholder="Nomor rekening boleh kosong"
+						   autocomplete="off" readonly>
+				</fieldset>
+				<fieldset class="form-group floating-label-form-group">
+					<label for="gaji_lihat_total">Gaji Bersih</label>
+					<input type="text" class="form-control" id="gaji_lihat_bersih" name="nomor_rekening"
+						   placeholder="Nomor rekening boleh kosong"
+						   autocomplete="off" readonly>
+				</fieldset>
+				<fieldset class="form-group floating-label-form-group">
 					<label for="gaji_lihat_bulan">Bulan ke</label>
 					<input type="number" class="form-control" id="gaji_lihat_bulan" name="nomor_rekening"
 						   placeholder="Nomor rekening boleh kosong"
