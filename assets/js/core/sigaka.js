@@ -306,7 +306,7 @@ $(document).ready(function () {
 						'<th>Nama Karyawan</th>' +
 						'<th>Jabatan</th>' +
 						'<th>Tanggal</th>' +
-						'<th>Total Gaji</th>' +
+						'<th>Gaji</th>' +
 						'<th>Pinjaman</th>' +
 						'<th>Gaji Bersih</th>' +
 						'</tr>' +
@@ -314,6 +314,8 @@ $(document).ready(function () {
 						'<tbody>';
 					var no = 1;
 					var total = 0;
+					var kotor = 0;
+					var pinjaman = 0;
 					for (var i = 0; i < response.length; i++){
 						html += '' +
 							'<tr>' +
@@ -325,14 +327,18 @@ $(document).ready(function () {
 							'<td style="text-align: right"> Rp. '+formatRupiah((parseInt(response[i].gaji_bayar_pinjaman)).toString())+'</td>' +
 							'<td style="text-align: right"> Rp. '+formatRupiah(((parseInt(response[i].gaji_lembur) + parseInt(response[i].gaji_total)) - parseInt(response[i].gaji_bayar_pinjaman)).toString())+'</td>' +
 							'</tr>';
-						total = total + (parseInt(response[i].gaji_lembur) + parseInt(response[i].gaji_total))- parseInt(response[i].gaji_bayar_pinjaman);
+						total = total + (parseInt(response[i].gaji_lembur) + parseInt(response[i].gaji_total)) - parseInt(response[i].gaji_bayar_pinjaman);
+						kotor = kotor + (parseInt(response[i].gaji_lembur) + parseInt(response[i].gaji_total));
+						pinjaman = pinjaman + parseInt(response[i].gaji_bayar_pinjaman);
 						no++;
 					}
 					html += '' +
 						'</tbody>' +
 						'<tfoot>' +
 						'<tr>' +
-						'<td colspan="6" style="text-align: center"><b>Total</b></td>' +
+						'<td colspan="4" style="text-align: center"><b>Total</b></td>' +
+						'<td style="text-align: right"> <b>Rp.'+formatRupiah(kotor.toString())+'</b></td>' +
+						'<td style="text-align: right"> <b>Rp.'+formatRupiah(pinjaman.toString())+'</b></td>' +
 						'<td style="text-align: right"> <b>Rp.'+formatRupiah(total.toString())+'</b></td>' +
 						'</tr>' +
 						'</tfoot>' +
