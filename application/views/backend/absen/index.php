@@ -29,6 +29,15 @@
 					Data berhasil dihapus
 				</div>
 			<?php
+			elseif ($this->session->flashdata('alert') == 'absen_sudah_ada'):
+				?>
+				<div class="alert alert-danger alert-dismissible animated fadeInDown" id="feedback" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					Karyawan sudah absen hari ini
+				</div>
+			<?php
 			endif;
 			?>
 			<div class="card-header">
@@ -46,6 +55,7 @@
 						<td>Nama Karyawan</td>
 						<td>Hari</td>
 						<td>Tanggal</td>
+						<td>Status</td>
 					</tr>
 					</thead>
 					<tbody>
@@ -61,6 +71,11 @@
 							$tanggal = explode(' ',$value['absen_date_created']);
 							echo date_indo($tanggal[0]);
 							?>
+						</td>
+						<td>
+							<div class="badge badge-primary">
+								Tidak lembur
+							</div>
 						</td>
 					</tr>
 					<?php

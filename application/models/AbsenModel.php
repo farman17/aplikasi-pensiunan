@@ -22,4 +22,13 @@ class AbsenModel extends CI_Model{
 		$this->db->insert('sigaka_absen', $data);
 		return $this->db->affected_rows();
 	}
+
+	public function cek_absen($id,$tanggal){
+		$this->db->select('*');
+		$this->db->from('sigaka_absen');
+		$this->db->where('absen_karyawan_id',$id);
+		$this->db->like('absen_date_created',$tanggal);
+		$query = $this->db->get();
+		return $query->row_array();
+	}
 }
