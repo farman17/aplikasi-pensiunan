@@ -219,7 +219,7 @@ $(document).ready(function () {
 			dataType : 'json',
 			success: function (response) {
 				if (response != null){
-					$('#slip-nama').html(response.karyawan_nama);
+					$('.slip-nama').html(response.karyawan_nama);
 					$('#slip-jabatan').html(response.jabatan_nama);
 					$('#slip-nohp').html(response.karyawan_nomor_hp);
 					$('#slip-lembur').html(formatRupiah(response.gaji_lembur));
@@ -297,6 +297,11 @@ $(document).ready(function () {
 				console.log(response);
 				if (response != null){
 					html += '' +
+						'<div class="d-print-none float-right">' +
+						'<button onclick="window.print()" class="btn btn-sm btn-primary btn-bg-gradient-x-purple-blue"><i class="fa fa-user"></i> Cetak' +
+						'</button>' +
+						'</div>';
+					html += '' +
 						'<h2 style="text-align: center">Selkom Group</h2>' +
 						'<p style="text-align: center">Laporan Bulan '+bulanArr[parseInt(bulan)-1]+' '+tahun+'</p>' +
 						'<table class="table table-bordered">' +
@@ -332,6 +337,7 @@ $(document).ready(function () {
 						pinjaman = pinjaman + parseInt(response[i].gaji_bayar_pinjaman);
 						no++;
 					}
+					var d = new Date();
 					html += '' +
 						'</tbody>' +
 						'<tfoot>' +
@@ -342,12 +348,18 @@ $(document).ready(function () {
 						'<td style="text-align: right"> <b>Rp.'+formatRupiah(total.toString())+'</b></td>' +
 						'</tr>' +
 						'</tfoot>' +
-						'</table>';
-					html += '' +
-						'<div class="d-print-none">' +
-						'<button onclick="window.print()" class="btn btn-primary btn-bg-gradient-x-purple-blue"><i class="fa fa-print"></i> Cetak' +
-						'</button>' +
-						'</div>'
+						'</table>' +
+						'<div class="row">' +
+						'<div class="col-8"></div>' +
+						'<div class="col-4 text-center">' +
+						'<p>Pekanbaru, '+date_indo(d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate())+'</p>' +
+						'<p>Manajer</p>' +
+						'<br>' +
+						'<br>' +
+						'<br>' +
+						'<p><b><u>Abdul Mustaqim</u></b></p>' +
+						'</div>' +
+						'</div>';
 					$('#laporan').html(html);
 				}
 			},
@@ -470,5 +482,5 @@ function date_indo(s) {
 	var tanggal = split[2];
 	var bulanArr = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
 
-	return tanggal + '-' + bulanArr[parseInt(bulan)-1] + '-' + tahun;
+	return tanggal + ' ' + bulanArr[parseInt(bulan)-1] + ' ' + tahun;
 }

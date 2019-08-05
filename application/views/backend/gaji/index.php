@@ -256,7 +256,7 @@
 								<tr>
 									<td>Nama</td>
 									<td>:</td>
-									<td><span id="slip-nama"></span></td>
+									<td><span class="slip-nama"></span></td>
 								</tr>
 								<tr>
 									<td>Jabatan</td>
@@ -331,8 +331,15 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-6"></div>
-						<div class="col-6">
+						<div class="col-6 text-center" >
+							<p><br></p>
+							<p>Penerima</p>
+							<br>
+							<br>
+							<br>
+							<p><b><u><span class="slip-nama"></span></u></b></p>
+						</div>
+						<div class="col-6 text-center">
 							<p>Pekanbaru, <?= date_indo(date('Y-m-d')) ?></p>
 							<p>Manajer</p>
 							<br>
