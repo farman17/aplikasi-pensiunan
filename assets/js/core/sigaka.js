@@ -227,6 +227,18 @@ $(document).ready(function () {
 					total = parseInt(response.gaji_lembur) + parseInt(response.gaji_total);
 					$('#slip-total').html(formatRupiah(total.toString()));
 
+					var myStr = date_indo(response.gaji_tanggal);
+					var strArray = myStr.split(" ");
+					var bulan = strArray[1];
+					$('.slip-bulan').html(bulan);
+
+					var myStr2 = response.gaji_tanggal;
+					var strArray2 = myStr2.split("-");
+					var bulan2 = strArray2[1];
+
+					var jumlahHari = ['31','28','31','30','31','30','31','31','30','31','30','31'];
+					$('#slip-hari').html(jumlahHari[parseInt(bulan2)]);
+
 					var getUrl2 = root + 'gaji/pinjam/' + id;
 					$.ajax({
 						url : getUrl2,
@@ -483,4 +495,33 @@ function date_indo(s) {
 	var bulanArr = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
 
 	return tanggal + ' ' + bulanArr[parseInt(bulan)-1] + ' ' + tahun;
+}
+
+function days_between(StartDate, EndDate) {
+	// Here are the two dates to compare
+	var date1 = StartDate;
+	var date2 = EndDate;
+
+// First we split the values to arrays date1[0] is the year, [1] the month and [2] the day
+	date1 = date1.split('-');
+	date2 = date2.split('-');
+
+// Now we convert the array to a Date object, which has several helpful methods
+	date1 = new Date(date1[0], date1[1], date1[2]);
+	date2 = new Date(date2[0], date2[1], date2[2]);
+
+// We use the getTime() method and get the unixtime (in milliseconds, but we want seconds, therefore we divide it through 1000)
+	date1_unixtime = parseInt(date1.getTime() / 1000);
+	date2_unixtime = parseInt(date2.getTime() / 1000);
+
+// This is the calculated difference in seconds
+	var timeDifference = date2_unixtime - date1_unixtime;
+
+// in Hours
+	var timeDifferenceInHours = timeDifference / 60 / 60;
+
+// and finaly, in days :)
+	var timeDifferenceInDays = timeDifferenceInHours  / 24;
+
+	return (timeDifferenceInDays);
 }

@@ -94,7 +94,7 @@
 										<button
 											class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-slip"
 											data-toggle="modal" data-target="#slip" value="<?= $value['gaji_id'] ?>"
-											title="Sudah bayar" disabled><i class="ft-printer"></i></button>
+											title="Sudah bayar"><i class="ft-printer"></i></button>
 										<button
 											class="btn btn-success btn-sm  btn-bg-gradient-x-purple-blue box-shadow-2 gaji-bayar"
 											data-toggle="modal" data-target="#bayar" value="<?= $value['gaji_id'] ?>"
@@ -267,6 +267,20 @@
 									<td>Nomor HP</td>
 									<td>:</td>
 									<td><span id="slip-nohp"></span></td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-6">
+							<table>
+								<tr>
+									<td>Bulan</td>
+									<td>:</td>
+									<td><span class="slip-bulan"></span></td>
+								</tr>
+								<tr>
+									<td>Jumlah Hari Masuk</td>
+									<td>:</td>
+									<td><span id="slip-hari"></span></td>
 								</tr>
 							</table>
 						</div>
