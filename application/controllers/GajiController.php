@@ -26,6 +26,16 @@ class GajiController extends CI_Controller{
 		$this->load->view('templates/footer');
 	}
 
+	public function detail($id){
+		$data = array(
+			'gaji' => $this->GajiModel->lihat_gaji_perorang($id),
+			'title' => 'Gaji'
+		);
+		$this->load->view('templates/header',$data);
+		$this->load->view('backend/gaji/detail',$data);
+		$this->load->view('templates/footer');
+	}
+
 	public function lihat($id){
 		$data = $this->GajiModel->lihat_satu_gaji_by_id($id);
 		echo json_encode($data);
