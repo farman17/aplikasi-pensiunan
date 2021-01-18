@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: sosmed-service
+  name: p-service
   namespace: production
 spec:
   ports:
@@ -9,26 +9,26 @@ spec:
     protocol: TCP
   #type: LoadBalancer
   selector:
-    app: sosmed
+    app: pepe
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sosmed
+  name: p-deploy
   namespace: production
 spec:
   selector:
     matchLabels:
-      app: sosmed
+      app: pepe
   replicas: 2
   template:
     metadata:
       labels:
-        app: sosmed
+        app: pepe
     spec:
       containers:
-      - name: php-pesbuk
-        image: farman17/booking-hotel
+      - name: php-p
+        image: farman17/aplikasi-sigaka
         ports:
           - containerPort: 80
        
@@ -37,17 +37,17 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: sosmed-ingress
+  name: p-ingress
   namespace: production
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: landing.dailybugis.my.id
+  - host: sigaka.dailybugis.my.id
     http:
       paths:
       #- path: /
       - backend:
-          serviceName: sosmed-service
+          serviceName: p-service
           servicePort: 80
 
